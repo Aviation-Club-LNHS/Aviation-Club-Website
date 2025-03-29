@@ -11,7 +11,7 @@ Welcome to the **LNHS Aviation Club**—where you can explore the world of aviat
 ## 💰 Membership Details
 - **Cost:** $30 to join
 - **Includes:** Access to kits, club resources, and expert guidance
-- **Join Online:** Sign up through our **[Discord Community](https://discord.gg/9ZFMz7WnS8)**
+- **Join Online:** Sign up through our **[Discord Server](https://discord.gg/9ZFMz7WnS8)**
 
 ## 🌎 How to Join
 1. Click the link to our **[Discord Server](https://discord.gg/9ZFMz7WnS8)**.
