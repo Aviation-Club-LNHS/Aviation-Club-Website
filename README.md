@@ -22,3 +22,9 @@ Welcome to the **LNHS Aviation Club** where you can explore the world of aviatio
 ## 📢 Stay Connected
 Stay updated on upcoming events, workshops, and projects by following our Discord community. We can't wait to see you take off with the LNHS Aviation Club! 🚀
 
+## 📜 License & Attribution
+
+This project is licensed under the **Apache 2.0 License**.  
+If you use, modify, or distribute this work, **please give proper credit** by linking back to this repository.  
+
+🔗 **License Details:** [Apache 2.0 License](https://github.com/Aviation-Club-LNHS/Aviation-Club-Website/blob/main/LICENSE).
