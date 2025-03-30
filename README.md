@@ -1,30 +1,89 @@
-# 🛩️ LNHS Aviation Club
 
-Welcome to the **LNHS Aviation Club** where you can explore the world of aviation by building your own planes and helicopters with our exciting model kits! Whether you're a beginner or an experienced hobbyist, our club provides a hands-on experience in aircraft assembly and design.
+![Logo](https://imgur.com/VE1nWC7.png)
 
-## ✈️ What We Offer
-- Build and customize model planes and helicopters using high-quality kits.
-- Learn the basics of aerodynamics, flight mechanics, and assembly.
-- Connect with other aviation enthusiasts in a supportive community.
-- Participate in special projects, competitions, and showcases.
 
-## 💰 Membership Details
-- **Cost:** $30 to join
-- **Includes:** Access to kits, club resources, and expert guidance
-- **Join Online:** Sign up through our **[Discord Server](https://discord.gg/9ZFMz7WnS8)**
+# FQQD's MCServer Website Template 1.0
 
-## 🌎 How to Join
-1. Click the link to our **[Discord Server](https://discord.gg/9ZFMz7WnS8)**.
-2. Apply to become a Member.
-3. Pay the $30 membership fee to gain full access.
-4. Start building and flying with us!
+A template for a modern looking website to promote your Minecraft server.
 
-## 📢 Stay Connected
-Stay updated on upcoming events, workshops, and projects by following our Discord community. We can't wait to see you take off with the LNHS Aviation Club! 🚀
+Written with HTML and a lot of CSS and the minimal usage of JavaScript.
 
-## 📜 License & Attribution
+Test it out: https://fqqd.github.io/MCServer-Web-Template/index.html
 
-This project is licensed under the **Apache 2.0 License**.  
-If you use, modify, or distribute this work, **please give proper credit** by linking back to this repository.  
 
-🔗 **License Details:** [Apache 2.0 License](https://github.com/Aviation-Club-LNHS/Aviation-Club-Website/blob/main/LICENSE).
+## Features
+
+- Server adress copy button
+- Modern design
+- Discord server embed
+- Team member cards
+- Bedrock and Java IP cards
+- Navbar
+- Mobile support
+- Simple Configuration
+- Hover animations
+
+
+## FAQ
+
+#### How do I personalize this website?
+
+To edit this website, simply fork the repository and edit the "index.html" and the "style.css" in the "media" folder. 
+Reading through the code should be enough to understand what you are able to edit.
+
+#### How do I make the Discord Embed work?
+
+-  Go to Discord Server Settings
+- "Widget"
+- Enable Server Widget
+- Select an Invite Channel (e.g. the main chat)
+- Manually copy ONLY THE LINK ("https://discord.com/widget?id=[SERVER-ID]&theme=dark")
+- Replace the imgur link in the Discord Section with the Discord Widget link
+
+#### Where can I host this website?
+
+I recommend hosting the website on your own Linux VServer with Caddyserver, but if you need to have a free hosting service, I recommend Neocities or GitHub Pages.
+
+#### Why would I need such a website?
+
+This website can help to provide additional information about your Minecraft Server and get people to join it.
+
+#### Can I use this freely without copyright?
+
+You can use and edit the website as much as you want, as long as the "Made by FQQD 2023" stays on the bottom of the site unchanged.
+
+## Screenshots
+
+![App Screenshot](https://imgur.com/zOqKk56.png)
+
+
+![App Screenshot](https://imgur.com/Th7NzCh.png)
+
+
+![App Screenshot](https://imgur.com/dhUnvAK.png)
+
+
+![App Screenshot](https://imgur.com/hgX2Ztd.png)
+
+
+![App Screenshot](https://imgur.com/aSpvshJ.png)
+
+
+![App Screenshot](https://imgur.com/v01GJAw.png)
+
+
+## Usage/Examples
+
+![App Screenshot](https://imgur.com/8ic4MS7.png)
+## Authors
+
+- [@FQQD](https://fqqd.de)
+- Originally made for [@HerrFisch](https://www.github.com/HerrFisch)
+
+
+## Lastly...
+If you have any further question or want to help and contribute, the best ways to do this are
+- Creating an [issue report](https://github.com/FQQD/MCServer-Web-Template/issues)
+- Joining [my discord](https://dc.fqqd.de) and asking for help
+
+Here's a cookie for reading this far: 🍪
