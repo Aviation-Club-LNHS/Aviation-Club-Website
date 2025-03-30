@@ -1,3 +1,6 @@
+/* ======================
+   ROOT VARIABLES & BASE STYLES 
+   ====================== */
 :root {
     --nice-padding: 6rem;
     --roundness: 0.75rem;
@@ -22,7 +25,9 @@ body {
     margin:0px;
 }
 
-
+/* ======================
+   SCROLL ANCHOR POINTS
+   ====================== */
 #more {
     padding-top:5rem;
     margin-top: -5rem;
@@ -40,7 +45,9 @@ body {
     margin-top: -5rem;
 }
 
-
+/* ======================
+   NAVIGATION STYLES
+   ====================== */
 .banner {
     display: flex;
     position: fixed;
@@ -55,8 +62,6 @@ body {
     align-content: center;
     padding-top: .4rem;
 }
-
-
 
 .headline {
     margin-top: 2rem;
@@ -180,8 +185,9 @@ body {
     background-color: #00000022;
 } 
 
-
-
+/* ======================
+   MAIN CONTENT SECTIONS
+   ====================== */
 .mainflex {
     display: flex;
     align-items: center;
@@ -190,6 +196,7 @@ body {
     flex-direction: column;
 }
 
+/* Section 1 - Hero */
 .main1 {
     padding-top: calc(var(--nice-padding) + 2rem);
     display:flex;
@@ -294,6 +301,7 @@ body {
     transform: scale(1.05)
 }
 
+/* Section 2 - Features */
 .main2 {
     display: flex;
     justify-content: center;
@@ -303,8 +311,6 @@ body {
     background-color: var(--background2);
     width: 100%;
 }
-
-
 
 .main2_features_div {
     padding-top: 2rem;
@@ -343,7 +349,6 @@ body {
     }
   }
 
-
 .main2_feature_img {
     width: 100%;
     height: 50%;
@@ -366,7 +371,84 @@ body {
     margin-bottom: auto;
 }
 
+/* Section 3 - Join */
+.main3 {
+    background-color: var(--background1);
+    min-height: 10rem;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+}
 
+.main3_join_div_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    margin: 1rem;
+}
+
+.main3_join_div {
+    display: flex;
+    flex-direction: column;
+    width: 26rem;
+    height: 12rem;
+    background-color: var(--background2);
+    border-radius: var(--roundness);
+    margin:1rem;
+    padding: 1rem;
+}
+
+.main3_join_title {
+    text-align: center;
+    font-size:1.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    transition: all .5s;
+    margin-bottom: .5rem;
+}
+
+.main3_join_content_div {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--background1);
+    height: 100%;
+    border-radius: var(--roundness);
+    align-items: center;
+    justify-content: center;
+}
+
+.main3_join_categories {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-size:1.4rem;
+    line-height: 1.5;
+    border-right: 3px solid var(--background2);
+    padding-right: .75rem;
+}
+.main3_join_values {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size:1.4rem;
+    line-height: 1.5;
+    border-left: 3px solid var(--background2);
+    padding-left: .75rem;
+}
+.main3_join_instructions {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    border-left: 3px solid var(--background2);
+    padding-left: .75rem;
+}
+
+/* Section 4 - Discord */
 .main4 {
     min-height: 10rem;
     width:100%;
@@ -403,7 +485,6 @@ body {
 
 }
 
-
 .main4_dc_description {
     margin-left:1.5rem;
     margin-right:1.5rem;
@@ -433,9 +514,7 @@ body {
     padding-right: 1.5rem;
 }
 
-
-
-
+/* Section 5 - Team */
 .main5 {
     background-color: var(--background2);
     min-height: 10rem;
@@ -521,7 +600,6 @@ body {
     font-size:1.2rem;
 }
 
-
 .main5_supporter_div {
     display: flex;
     max-width: 825px;
@@ -583,85 +661,18 @@ body {
     margin-bottom: auto;
 }
 
-
-
-
-
-.main3 {
-    background-color: var(--background1);
-    min-height: 10rem;
-    width:100%;
-    display: flex;
-    justify-content: center;
-    flex-direction:column;
-}
-
-.main3_join_div_div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap-reverse;
-    margin: 1rem;
-}
-
-.main3_join_div {
-    display: flex;
-    flex-direction: column;
-    width: 20rem;
-    height: 8rem;
-    background-color: var(--background2);
-    border-radius: var(--roundness);
-    margin: 1rem;
-    padding: 1rem;
-}
-
-.main3_join_title {
-    text-align: center;
-    font-size:1.5rem;
+/* ======================
+   UTILITY CLASSES / FONT STYLING
+   ====================== */
+.bold-text {
+    font-weight: bold;
+    /* or */
     font-weight: 700;
-    color: #fff;
-    text-decoration: none;
-    transition: all .5s;
-    margin-bottom: .5rem;
 }
 
-.main3_join_content_div {
-    display: flex;
-    flex-direction: row;
-    background-color: var(--background1);
-    height: 100%;
-    border-radius: var(--roundness);
-    align-items: center;
-    justify-content: center;
-}
-
-.main3_join_categories {
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    font-size:1.4rem;
-    line-height: 1.5;
-    border-right: 3px solid var(--background2);
-    padding-right: .75rem;
-}
-.main3_join_values {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    font-size:1.4rem;
-    line-height: 1.5;
-    border-left: 3px solid var(--background2);
-    padding-left: .75rem;
-}
-
-
-
-
-
-
-
-/* Copyright Text */
-
+/* ======================
+   FOOTER / COPYRIGHT STYLES
+   ====================== */
 .copyright {
     color: #ffffff99;
     text-decoration: none;
@@ -670,14 +681,31 @@ body {
 .copyright_div {
     display: flex;
     justify-content: center;
-    padding: 16px;
-    width:auto;
-    background-color: #000;
+    padding:22px;
+    width: auto;
+    background-color: #131313;
+    overflow: hidden;
 }
 
+.author-link {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin: 0;
+    padding: 0 0.1rem;
+}
 
+.author-link:hover {
+    transform: scale(1.5);
+    color: #86B6F6;
+    margin: 0 1.5rem;
+    text-shadow: 0 0 10px rgba(134, 182, 246, 0.5);
+}
 
-
+/* ======================
+   MEDIA QUERIES
+   ====================== */
 @media only screen and (max-width: 600px) {
     .desktop_navbar{
         display:none;
@@ -748,3 +776,5 @@ body {
         margin: .25rem;
     }
 }
+
+
