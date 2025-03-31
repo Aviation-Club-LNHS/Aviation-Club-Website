@@ -520,7 +520,7 @@ body {
     padding-left: .75rem;
 }
 
-/* Section 4 - Discord */
+/* Section 4 - Discord (Updated for Widget Styling and Text) */
 .main4 {
     min-height: 10rem;
     width: 100%;
@@ -528,11 +528,7 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-}
-
-.main4_dc_widget {
-    border-radius: var(--roundness);
-    border: 0;
+    background-color: var(--background1); /* Matches site background */
 }
 
 .main4_dc_div {
@@ -542,26 +538,54 @@ body {
     background-color: var(--background2);
     border-radius: var(--roundness);
     max-width: 48rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.main4_dc_widget {
+    border-radius: var(--roundness);
+    border: 1px solid var(--accent1); /* Subtle border to match theme */
+    background-color: var(--background1); /* Blends with container */
 }
 
 .main4_dc_description_div {
     display: flex;
     flex-direction: column;
+    padding: 1rem;
 }
 
 .main4_dc_description_title {
-    margin: 2rem;
+    margin: 1.5rem 2rem;
     text-align: center;
     font-size: 1.5rem;
     font-weight: 700;
+    color: var(--accent1); /* Highlighted title */
 }
 
 .main4_dc_description {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
     margin-bottom: 1.5rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem; /* Slightly larger for readability */
+    line-height: 1.8; /* Better spacing */
+    color: #ccc; /* Light gray for contrast */
+    text-decoration: none;
 }
+
+.main4_dc_description_item {
+    color: #ccc;
+}
+
+.main4_dc_description_item::before {
+    content: "・";
+    color: var(--accent2); /* Colored bullet points */
+    margin-right: 0.5rem;
+}
+
+.main4_dc_description_item:last-child {
+    font-style: italic; /* Italicize "& more" */
+    font-size: 1.2rem; /* Slightly smaller */
+}
+
 .main4_dc_button_a {
     text-decoration: none;
     color: #fff;
@@ -574,15 +598,15 @@ body {
     margin-bottom: 1.5rem;
     transition: all .5s;
 }
+
 .main4_dc_button_a:hover {
     border: solid 1px var(--accent2);
     background-color: var(--accent2);
-    transform: scale(1.05)
+    transform: scale(1.05);
 }
+
 .main4_dc_button {
-    padding: .5rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding: 0.5rem 1.5rem;
 }
 
 /* Section 5 - Team */
