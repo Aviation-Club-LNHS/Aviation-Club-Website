@@ -95,7 +95,7 @@
         </script>
       </div>
 
-      <!-- SECTION 2 - FEATURES (Updated with Arrows) -->
+      <!-- SECTION 2 - FEATURES -->
       <div id="more"></div>
       <div class="main2">
         <a class="headline">What we have</a>
@@ -135,10 +135,16 @@
       <div class="main4">
         <a class="headline">Join the Discord</a>
         <div class="main4_dc_div">
-          <iframe src="https://discord.com/widget?id=1353885120737837207" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          <iframe class="main4_dc_widget" src="https://discord.com/widget?id=1353885120737837207&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
           <div class="main4_dc_description_div">
             <a class="main4_dc_description_title">Let's talk!</a>
-            <a class="main4_dc_description"> ・Meet other people <br> ・Ask questions <br> ・Get notified about updates <br> ・Give feedback  <br><br> & more </a>
+            <a class="main4_dc_description">
+              <span class="main4_dc_description_item">・Meet other people</span><br>
+              <span class="main4_dc_description_item">・Ask questions</span><br>
+              <span class="main4_dc_description_item">・Get notified about updates</span><br>
+              <span class="main4_dc_description_item">・Give feedback</span><br>
+              <span class="main4_dc_description_item">& more</span>
+            </a>
             <a href="https://discord.gg/9ZFMz7WnS8" class="main4_dc_button_a">
               <div class="main4_dc_button">Join Now!</div>
             </a>
@@ -248,19 +254,52 @@
       <!-- The  () is because space wont work for some reason -->
     </footer>
 
-    <!-- JavaScript for Horizontal Scrolling Arrows -->
+    <!-- JavaScript for Horizontal Scrolling Arrows with Looping -->
     <script>
       const featuresContainer = document.querySelector('.main2_features_div');
       const scrollLeftBtn = document.querySelector('.scroll-left');
       const scrollRightBtn = document.querySelector('.scroll-right');
+      const scrollAmount = 300; // Adjust based on card width (18rem + gap)
 
+      // Function to check and loop the scroll position
+      function handleScrollLoop() {
+        const maxScrollLeft = featuresContainer.scrollWidth - featuresContainer.clientWidth;
+
+        // If scrolled to the end, loop to the beginning
+        if (featuresContainer.scrollLeft >= maxScrollLeft) {
+          featuresContainer.scrollTo({ left: 0, behavior: 'smooth' });
+        }
+        // If scrolled to the beginning, loop to the end
+        else if (featuresContainer.scrollLeft <= 0) {
+          featuresContainer.scrollTo({ left: maxScrollLeft, behavior: 'smooth' });
+        }
+      }
+
+      // Scroll left
       scrollLeftBtn.addEventListener('click', () => {
-        featuresContainer.scrollBy({ left: -300, behavior: 'smooth' }); // Adjust based on card width
+        const currentScroll = featuresContainer.scrollLeft;
+        if (currentScroll <= 0) {
+          // If at the beginning, jump to the end
+          featuresContainer.scrollTo({ left: featuresContainer.scrollWidth - featuresContainer.clientWidth, behavior: 'smooth' });
+        } else {
+          featuresContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        }
       });
 
+      // Scroll right
       scrollRightBtn.addEventListener('click', () => {
-        featuresContainer.scrollBy({ left: 300, behavior: 'smooth' });
+        const currentScroll = featuresContainer.scrollLeft;
+        const maxScrollLeft = featuresContainer.scrollWidth - featuresContainer.clientWidth;
+        if (currentScroll >= maxScrollLeft) {
+          // If at the end, jump to the beginning
+          featuresContainer.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          featuresContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
       });
+
+      // Add event listener to handle manual scrolling (e.g., via mouse or touch)
+      featuresContainer.addEventListener('scroll', handleScrollLoop);
     </script>
   </body>
 </html>
