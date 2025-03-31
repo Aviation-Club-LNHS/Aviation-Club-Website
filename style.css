@@ -10,7 +10,6 @@
     --background1: #212529;
     --background2: #16191b;
 
-
     color-scheme: dark;
 }
 
@@ -19,29 +18,29 @@ span {
 }
 
 body {
-    font-family:'Space Grotesk', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     background-color: var(--background1);
     color: white;
-    margin:0px;
+    margin: 0px;
 }
 
 /* ======================
    SCROLL ANCHOR POINTS
    ====================== */
 #more {
-    padding-top:5rem;
+    padding-top: 5rem;
     margin-top: -5rem;
 }
 #discord {
-    padding-top:5rem;
+    padding-top: 5rem;
     margin-top: -5rem;
 }
 #about {
-    padding-top:5rem;
+    padding-top: 5rem;
     margin-top: -5rem;
 }
 #join {
-    padding-top:5rem;
+    padding-top: 5rem;
     margin-top: -5rem;
 }
 
@@ -66,20 +65,20 @@ body {
 .headline {
     margin-top: 2rem;
     color: #fff;
-    font-size:3rem;
+    font-size: 3rem;
     text-align: center;
     font-weight: 600;
 }
 
 .desktop_navbar {
-    position:fixed;
+    position: fixed;
     display: flex;
     height: 4rem;
     width: 100%;
     top: 0;
     right: 0;
     left: 0;
-    bottom:0;
+    bottom: 0;
     background-color: #00000022;
     backdrop-filter: blur(15px);
     z-index: 5;
@@ -107,7 +106,7 @@ body {
 }
 
 .desktop_navbar_link2 {
-    padding:.5rem;
+    padding: .5rem;
     color: #fff;
     text-decoration: none;
     text-align: center;
@@ -161,7 +160,7 @@ body {
 }
 
 .mobile_navbar_link {
-    padding:.5rem;
+    padding: .5rem;
 }
 
 .mobile_navbar a {
@@ -199,7 +198,7 @@ body {
 /* Section 1 - Hero */
 .main1 {
     padding-top: calc(var(--nice-padding) + 2rem);
-    display:flex;
+    display: flex;
     width: 100%;
     align-self: center;
     flex-direction: column;
@@ -220,7 +219,7 @@ body {
 .main1_logo {
     display: block;
     align-self: center;
-    margin-left:auto;
+    margin-left: auto;
     margin-right: auto;
     transition: all .5s;
     max-width: 40rem;
@@ -231,7 +230,7 @@ body {
 
 .main1_description {
     text-align: center;
-    font-size:3rem;
+    font-size: 3rem;
     margin-bottom: var(--nice-padding);
     margin-left: 1rem;
     margin-right: 1rem;
@@ -239,7 +238,7 @@ body {
 
 .main1_actcent {
     font-weight: 800;
-    color:var(--accent1);
+    color: var(--accent1);
 }
 
 .main1_ipcopier {
@@ -252,7 +251,7 @@ body {
     border-radius: var(--roundness);
     color: white;
     transition: all .5s;
-    cursor:pointer;
+    cursor: pointer;
     position: relative;
 }
 
@@ -262,12 +261,12 @@ body {
 }
 
 .main1_ipcopier_text1 {
-    font-size:2rem;
+    font-size: 2rem;
     font-weight: 800;
 }
 
 .main1_ipcopier_text2 {
-    font-size:1.5rem;
+    font-size: 1.5rem;
 }
 
 .main1_idcopier_text3 {
@@ -280,7 +279,7 @@ body {
     transform: translate(-50%, -0%);
     text-align: center;
     background-color: rgba(23, 107, 135, 0.1);
-    border:solid rgba(134, 182, 246, 1) 1px;
+    border: solid rgba(134, 182, 246, 1) 1px;
     color: #fff;
     border-radius: var(--roundness);
     z-index: 9999;
@@ -292,7 +291,7 @@ body {
 .main1_downarrow {
     opacity: 50%;
     height: 1.5rem;
-    padding:2rem;
+    padding: 2rem;
     transition: all .5s;
 }
 
@@ -301,7 +300,7 @@ body {
     transform: scale(1.05)
 }
 
-/* Section 2 - Features */
+/* Section 2 - Features (Updated for Horizontal Scrolling) */
 .main2 {
     display: flex;
     justify-content: center;
@@ -314,41 +313,53 @@ body {
 
 .main2_features_div {
     padding-top: 2rem;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap:wrap;
+    display: flex; /* Horizontal layout */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Optional: Adds snap effect for smoother scrolling */
+    gap: 1rem; /* Space between cards, adjusted to fit your design */
+    padding: 10px;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: var(--accent1) var(--background1); /* Matches your theme */
 }
 
+/* Style for Webkit browsers (Chrome, Safari) */
+.main2_features_div::-webkit-scrollbar {
+    height: 8px;
+}
+
+.main2_features_div::-webkit-scrollbar-track {
+    background: var(--background1);
+}
+
+.main2_features_div::-webkit-scrollbar-thumb {
+    background: var(--accent1);
+    border-radius: var(--roundness);
+}
+
+.main2_features_div::-webkit-scrollbar-thumb:hover {
+    background: var(--accent2);
+}
+
+/* Style for each feature card */
 .main2_feature {
     display: flex;
     background-color: var(--background1);
     height: 24rem;
-    width: 18rem;
-    margin: 1rem;
+    width: 18rem; /* Keeping your original width */
+    margin: 0; /* Remove margin since gap handles spacing */
     border-radius: var(--roundness);
     transition: all .5s;
     flex-direction: column;
+    flex: 0 0 18rem; /* Fixed width to ensure horizontal layout */
+    scroll-snap-align: start; /* Aligns cards when scrolling */
 }
 
 .main2_feature:hover {
     background-color: #00000099;
-    transform: scale(1.05)
+    transform: scale(1.05);
 }
 
-@media (max-width: 1599px) {
-    .main2_features_div {
-      margin-left: 10rem;
-      margin-right: 10rem;
-    }
-  }
-@media (max-width: 1279px) {
-    .main2_features_div {
-      margin-left: 0rem;
-      margin-right: 0rem;
-    }
-  }
-
+/* Ensure images fit within the card */
 .main2_feature_img {
     width: 100%;
     height: 50%;
@@ -356,29 +367,58 @@ body {
     border-radius: var(--roundness);
 }
 
+/* Style for the feature headline */
 .main2_feature_headline {
     margin-top: 1rem;
     text-align: center;
-    font-size:1.5rem;
+    font-size: 1.5rem;
     font-weight: 700;
     margin-top: auto;
+    color: #fff;
+    text-decoration: none;
 }
 
+/* Style for the feature description */
 .main2_feature_text {
-    margin:1rem;
+    margin: 1rem;
     text-align: center;
-    font-size:1.2rem;
+    font-size: 1.2rem;
     margin-bottom: auto;
+    color: #ccc;
+    text-decoration: none;
+}
+
+/* Responsive adjustments for Section 2 */
+@media (max-width: 1599px) {
+    .main2_features_div {
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
+}
+
+@media (max-width: 1279px) {
+    .main2_features_div {
+        margin-left: 0rem;
+        margin-right: 0rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .main2_feature {
+        height: 20rem; /* Slightly smaller on mobile */
+        width: 15rem; /* Adjusted for smaller screens */
+        flex: 0 0 15rem;
+    }
 }
 
 /* Section 3 - Join */
 .main3 {
     background-color: var(--background1);
     min-height: 10rem;
-    width:100%;
+    width: 100%;
     display: flex;
     justify-content: center;
-    flex-direction:column;
+    flex-direction: column;
 }
 
 .main3_join_div_div {
@@ -396,13 +436,13 @@ body {
     height: 12rem;
     background-color: var(--background2);
     border-radius: var(--roundness);
-    margin:1rem;
+    margin: 1rem;
     padding: 1rem;
 }
 
 .main3_join_title {
     text-align: center;
-    font-size:1.5rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #fff;
     text-decoration: none;
@@ -424,7 +464,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: right;
-    font-size:1.4rem;
+    font-size: 1.4rem;
     line-height: 1.5;
     border-right: 3px solid var(--background2);
     padding-right: .75rem;
@@ -433,7 +473,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: left;
-    font-size:1.4rem;
+    font-size: 1.4rem;
     line-height: 1.5;
     border-left: 3px solid var(--background2);
     padding-left: .75rem;
@@ -451,7 +491,7 @@ body {
 /* Section 4 - Discord */
 .main4 {
     min-height: 10rem;
-    width:100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -480,18 +520,17 @@ body {
 .main4_dc_description_title {
     margin: 2rem;
     text-align: center;
-    font-size:1.5rem;
+    font-size: 1.5rem;
     font-weight: 700;
-
 }
 
 .main4_dc_description {
-    margin-left:1.5rem;
-    margin-right:1.5rem;
-    margin-bottom:1.5rem;
-    font-size:1.2rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
 }
-.main4_dc_button_a{
+.main4_dc_button_a {
     text-decoration: none;
     color: #fff;
     text-align: center;
@@ -503,13 +542,13 @@ body {
     margin-bottom: 1.5rem;
     transition: all .5s;
 }
-.main4_dc_button_a:hover{
+.main4_dc_button_a:hover {
     border: solid 1px var(--accent2);
     background-color: var(--accent2);
     transform: scale(1.05)
 }
 .main4_dc_button {
-    padding:.5rem;
+    padding: .5rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
@@ -518,20 +557,20 @@ body {
 .main5 {
     background-color: var(--background2);
     min-height: 10rem;
-    width:100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
-.main5_admin_div{
+.main5_admin_div {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem 1rem .5rem 1rem;
 }
-.main5_admins_div{
+.main5_admins_div {
     display: flex;
     max-width: 46rem;
     min-height: 18rem;
@@ -542,7 +581,7 @@ body {
     margin-left: 1rem;
 }
 .main5_admins_dev_type1 {
-    flex-direction:row;
+    flex-direction: row;
     padding-right: 2rem;
 }
 .main5_admins_dev_type2 {
@@ -571,7 +610,7 @@ body {
 }
 .main5_admins_description_rank {
     text-align: center;
-    font-size:1.5rem;
+    font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: .5rem;
 }
@@ -583,7 +622,7 @@ body {
 }
 .main5_admins_description_title {
     text-align: center;
-    font-size:1.5rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #fff;
     text-decoration: none;
@@ -597,7 +636,7 @@ body {
 
 .main5_admins_description {
     margin-bottom: auto;
-    font-size:1.2rem;
+    font-size: 1.2rem;
 }
 
 .main5_supporter_div {
@@ -605,7 +644,7 @@ body {
     max-width: 825px;
     justify-content: center;
     align-items: center;
-    flex-direction:row;
+    flex-direction: row;
     flex-wrap: wrap;
     margin-bottom: 1.5rem;
 }
@@ -635,7 +674,7 @@ body {
 }
 .main5_supporters_description_rank {
     text-align: center;
-    font-size:1.2rem;
+    font-size: 1.2rem;
     font-weight: 700;
     margin-bottom: .5rem;
 }
@@ -644,7 +683,7 @@ body {
 }
 .main5_supporters_description_title {
     text-align: center;
-    font-size:1.3rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: #fff;
     text-decoration: none;
@@ -657,7 +696,7 @@ body {
 }
 
 .main5_supporters_description {
-    font-size:1.2rem;
+    font-size: 1.2rem;
     margin-bottom: auto;
 }
 
@@ -681,7 +720,7 @@ body {
 .copyright_div {
     display: flex;
     justify-content: center;
-    padding:22px;
+    padding: 22px;
     width: auto;
     background-color: #131313;
     overflow: hidden;
@@ -707,14 +746,14 @@ body {
    MEDIA QUERIES
    ====================== */
 @media only screen and (max-width: 600px) {
-    .desktop_navbar{
-        display:none;
+    .desktop_navbar {
+        display: none;
     }
-    .mobile_navbar{
-        display:flex;
+    .mobile_navbar {
+        display: flex;
     }
     .headline {
-        font-size:1.9rem;
+        font-size: 1.9rem;
         margin-right: 1rem;
         margin-left: 1rem;
     }
@@ -732,7 +771,7 @@ body {
         align-self: center;
         padding-top: 1rem;
     }
-    .main5_admins_div{
+    .main5_admins_div {
         flex-direction: column;
         min-height: 0;
     }
@@ -752,7 +791,7 @@ body {
         min-height: 9rem;
     }
     .main3_join_content_div {
-        padding:1rem;
+        padding: 1rem;
     }
     .main5_admins_dev_type1 {
         padding-right: 0;
@@ -761,12 +800,13 @@ body {
         padding-left: 0;
     }
 }
+
 @media only screen and (max-width: 360px) {
     .main3_join_categories {
-        font-size:1rem;
+        font-size: 1rem;
     }
     .main3_join_values {
-        font-size:1rem;
+        font-size: 1rem;
     }
     .main3_join_div {
         min-width: 10rem;
@@ -776,5 +816,3 @@ body {
         margin: .25rem;
     }
 }
-
-
