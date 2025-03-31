@@ -99,6 +99,7 @@
       <div id="more"></div>
       <div class="main2">
         <a class="headline">What we have</a>
+        <button class="scroll-left">←</button>
         <div class="main2_features_div">
           <div class="main2_feature">
             <img class="main2_feature_img" alt="Feature Image" src="media/placeholder.png">
@@ -126,17 +127,24 @@
             <a class="main2_feature_text">Feature description</a>
           </div>
         </div>
+        <button class="scroll-right">→</button>
       </div>
 
-      <!-- SECTION 3 - DISCORD -->
+      <!-- SECTION 3 - DISCORD (Reverted to Original) -->
       <div id="discord"></div>
       <div class="main4">
         <a class="headline">Join the Discord</a>
         <div class="main4_dc_div">
-          <iframe src="https://discord.com/widget?id=1353885120737837207" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          <iframe class="main4_dc_widget" src="https://discord.com/widget?id=1353885120737837207&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
           <div class="main4_dc_description_div">
             <a class="main4_dc_description_title">Let's talk!</a>
-            <a class="main4_dc_description"> ・Meet other people <br> ・Ask questions <br> ・Get notified about updates <br> ・Give feedback  <br><br> &amp; more </a>
+            <a class="main4_dc_description">
+              ・Meet other people<br>
+              ・Ask questions<br>
+              ・Get notified about updates<br>
+              ・Give feedback<br>
+              & more
+            </a>
             <a href="https://discord.gg/9ZFMz7WnS8" class="main4_dc_button_a">
               <div class="main4_dc_button">Join Now!</div>
             </a>
@@ -242,8 +250,23 @@
      ====================== -->
 
     <footer class="copyright_div">
-      <a class="copyright">Made by &#8203;</a><a href="https://github.com/fir15playz" class="author-link">Im_NotCool &#8203;</a><a class="copyright">| &#8203;</a><a href="#" class="author-link">License</a>
-      <!-- The  (&#8203;) is because space wont work for some reason -->
+      <a class="copyright">Made by ​</a><a href="https://github.com/fir15playz" class="author-link">Im_NotCool ​</a><a class="copyright">| ​</a><a href="#" class="author-link">License</a>
+      <!-- The  () is because space wont work for some reason -->
     </footer>
+
+    <!-- JavaScript for Horizontal Scrolling Arrows (Looping Removed) -->
+    <script>
+      const featuresContainer = document.querySelector('.main2_features_div');
+      const scrollLeftBtn = document.querySelector('.scroll-left');
+      const scrollRightBtn = document.querySelector('.scroll-right');
+
+      scrollLeftBtn.addEventListener('click', () => {
+        featuresContainer.scrollBy({ left: -300, behavior: 'smooth' }); // Adjust based on card width
+      });
+
+      scrollRightBtn.addEventListener('click', () => {
+        featuresContainer.scrollBy({ left: 300, behavior: 'smooth' });
+      });
+    </script>
   </body>
 </html>
