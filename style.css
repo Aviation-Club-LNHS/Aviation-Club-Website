@@ -7,6 +7,7 @@
     --accent1: #B4D4FF;
     --accent2: #86B6F6;
     --accent2_transp: #176B8755;
+    --accent3: #EEF5FF;
     --background1: #212529;
     --background2: #16191b;
 
@@ -208,7 +209,7 @@ body {
     background: rgba(0, 0, 0, .5) url('https://imgur.com/cGMLytH.png');
     background-blend-mode: darken;
     background-repeat: no-repeat;
- Search for flights, hotels, and more with KAYAK. background-position: 50% 50%;
+    background-position: 50% 50%;
 }
 
 .main1_logo_a {
@@ -223,9 +224,12 @@ body {
     margin-right: auto;
     transition: all .5s;
     max-width: 40rem;
+    filter: drop-shadow(0 0 0 rgba(134, 182, 246, 0));
 }
+
 .main1_logo:hover {
-    transform: scale(1.05)
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 25px rgba(134, 183, 246, 0.75));
 }
 
 .main1_description {
@@ -247,7 +251,7 @@ body {
     padding-right: 2rem;
     font-size: 2rem;
     background-color: var(--accent2_transp);
-    border: 0px;
+    border: 2px solid transparent;
     border-radius: var(--roundness);
     color: white;
     transition: all .5s;
@@ -257,7 +261,9 @@ body {
 
 .main1_ipcopier:hover {
     background-color: var(--accent2);
-    transform: scale(1.05)
+    transform: scale(1.05);
+    border-color: var(--accent3);
+    box-shadow: 0 0 30px rgba(134, 182, 246, 0.3);
 }
 
 .main1_ipcopier_text1 {
@@ -300,7 +306,7 @@ body {
     transform: scale(1.05)
 }
 
-/* Section 2 - Features (Updated for Horizontal Scrolling with Arrows) */
+/* Section 2 - Features */
 .main2 {
     display: flex;
     justify-content: center;
@@ -317,7 +323,7 @@ body {
     display: flex; /* Horizontal layout */
     overflow-x: auto; /* Enables horizontal scrolling */
     scroll-snap-type: x mandatory; /* Optional: Adds snap effect for smoother scrolling */
-    gap: 1rem; /* Space between cards, adjusted to fit your design */
+    gap: 1rem; /* Space between cards */
     padding: 10px;
 }
 
@@ -353,26 +359,27 @@ body {
     }
 }
 
-/* Style for each feature card */
 .main2_feature {
     display: flex;
     background-color: var(--background1);
     height: 24rem;
-    width: 18rem; /* Keeping your original width */
+    width: 18rem;
     margin: 0; /* Remove margin since gap handles spacing */
     border-radius: var(--roundness);
     transition: all .5s;
     flex-direction: column;
     flex: 0 0 18rem; /* Fixed width to ensure horizontal layout */
     scroll-snap-align: start; /* Aligns cards when scrolling */
+    border: 2px solid transparent;
 }
 
 .main2_feature:hover {
     background-color: #00000099;
     transform: scale(1.05);
+    border-color: var(--accent2);
+    box-shadow: 0 0 30px rgba(134, 182, 246, 0.3);
 }
 
-/* Ensure images fit within the card */
 .main2_feature_img {
     width: 100%;
     height: 50%;
@@ -380,7 +387,6 @@ body {
     border-radius: var(--roundness);
 }
 
-/* Style for the feature headline */
 .main2_feature_headline {
     margin-top: 1rem;
     text-align: center;
@@ -391,7 +397,6 @@ body {
     text-decoration: none;
 }
 
-/* Style for the feature description */
 .main2_feature_text {
     margin: 1rem;
     text-align: center;
@@ -429,38 +434,7 @@ body {
 .scroll-left:hover,
 .scroll-right:hover {
     background-color: var(--accent2_transp);
-    transform: scale(1.1);
-}
-
-/* Hide arrows on mobile (max-width: 600px) */
-@media (max-width: 600px) {
-    .scroll-left,
-    .scroll-right {
-        display: none;
-    }
-}
-
-/* Responsive adjustments for Section 2 */
-@media (max-width: 1599px) {
-    .main2_features_div {
-        margin-left: 10rem;
-        margin-right: 10rem;
-    }
-}
-
-@media (max-width: 1279px) {
-    .main2_features_div {
-        margin-left: 0rem;
-        margin-right: 0rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .main2_feature {
-        height: 20rem; /* Slightly smaller on mobile */
-        width: 15rem; /* Adjusted for smaller screens */
-        flex: 0 0 15rem;
-    }
+    transform: scale(1.1) translateY(-50%); /* Adjusted to account for transform */
 }
 
 /* Section 3 - Join */
@@ -494,7 +468,7 @@ body {
 
 .main3_join_title {
     text-align: center;
-    font Route 66, the Mother Road, stretches over 2,400 miles from Chicago to Santa Monica, passing through eight states. It’s a historic highway that’s been immortalized in songs, movies, and books, like *Route 66* by Nat King Cole and *The Grapes of Wrath* by John Steinbeck. If you’re planning a road trip, you can still drive parts of it—about 85% remains drivable, though some sections are now part of modern interstates like I-40. Expect diners, neon signs, and quirky roadside attractions like the Cadillac Ranch in Texas or the Blue Whale of Catoosa in Oklahoma. It’s a slice of Americana, best experienced with a good playlist and a full tank of gas. -size: 1.5rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #fff;
     text-decoration: none;
@@ -540,7 +514,7 @@ body {
     padding-left: .75rem;
 }
 
-/* Section 4 - Discord (Reverted to Original) */
+/* Section 4 - Discord */
 .main4 {
     min-height: 10rem;
     width: 100%;
@@ -550,38 +524,117 @@ body {
     align-items: center;
 }
 
-.main4_dc_widget {
-    border-radius: var(--roundness);
-    border: 0;
-}
-
 .main4_dc_div {
     margin: 2rem;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap; /* Allow wrapping for better responsiveness */
     background-color: var(--background2);
     border-radius: var(--roundness);
     max-width: 48rem;
+    justify-content: space-between; /* Space out the events, widget, and description */
+    align-items: flex-start; /* Align items to the top */
+}
+
+.main4_dc_events {
+    background-color: var(--background2); /* Matches main4_dc_div background */
+    border-radius: var(--roundness); /* Rounded corners */
+    border: 2px solid transparent; /* Transparent border by default */
+    transition: all .5s; /* Smooth transition for hover effects */
+    padding: 1rem;
+    width: 350px; /* Match the width of the widget */
+    min-height: 500px; /* Match the height of the widget */
+    margin: 0.5rem; /* Add spacing */
+    display: flex;
+    flex-direction: column;
+}
+
+.main4_dc_events:hover {
+    background-color: #00000099; /* Matches the hover background of main2_feature */
+    transform: scale(1.05); /* Matches main2_feature hover */
+    border-color: var(--accent2); /* Matches main2_feature hover */
+    box-shadow: 0 0 30px rgba(134, 182, 246, 0.3); /* Matches main2_feature hover */
+}
+
+.main4_dc_events_title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.main4_dc_event {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ffffff33; /* Subtle separator */
+}
+
+.main4_dc_event:last-child {
+    border-bottom: none; /* Remove border from the last event */
+}
+
+.main4_dc_event_name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.main4_dc_event_date {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.main4_dc_widget_wrapper {
+    background-color: var(--background2); /* Matches main4_dc_div background */
+    border-radius: var(--roundness); /* Ensures the wrapper has rounded corners */
+    transition: all .5s; /* Smooth transition for background color */
+    margin: 0.5rem; /* Add spacing */
+}
+
+.main4_dc_widget_wrapper:hover {
+    background-color: #00000099; /* Matches the hover background of main2_feature */
+}
+
+.main4_dc_widget {
+    border-radius: var(--roundness); /* Rounded corners */
+    border: 2px solid transparent; /* Transparent border by default */
+    transition: all .5s; /* Smooth transition for hover effects */
+    width: 350px; /* Fixed width as per iframe */
+    height: 500px; /* Fixed height as per iframe */
+}
+
+.main4_dc_widget:hover {
+    transform: scale(1.05); /* Matches main2_feature hover */
+    border-color: var(--accent2); /* Matches main2_feature hover */
+    box-shadow: 0 0 30px rgba(134, 182, 246, 0.3); /* Matches main2_feature hover */
 }
 
 .main4_dc_description_div {
     display: flex;
     flex-direction: column;
+    padding: 1rem; /* Added padding for better spacing */
+    flex: 1; /* Allow the description to take remaining space */
+    min-width: 200px; /* Ensure it doesn't get too narrow */
 }
 
 .main4_dc_description_title {
-    margin: 2rem;
+    margin: 1rem; /* Reduced margin to balance with padding */
     text-align: center;
     font-size: 1.5rem;
     font-weight: 700;
+    font-family: 'Space Grotesk', sans-serif; /* Explicitly set to match body */
 }
 
 .main4_dc_description {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-left: 1rem; /* Adjusted to balance with padding */
+    margin-right: 1rem;
+    margin-bottom: 1rem;
     font-size: 1.2rem;
+    font-family: 'Space Grotesk', sans-serif; /* Explicitly set to match body */
+    line-height: 1.6; /* Adjusted for better readability */
 }
+
 .main4_dc_button_a {
     text-decoration: none;
     color: #fff;
@@ -591,14 +644,16 @@ body {
     margin-top: auto;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom:  Ascend the skies in a hot air balloon for a serene, bird’s-eye view of the world below. Floating over landscapes like Napa Valley or the Serengeti during migration season offers a peaceful escape—think rolling vineyards or herds of wildebeest stretching across the savanna. You’ll need to book with a reputable operator; companies like Balloons Above the Valley or Serengeti Balloon Safaris have solid reviews. Expect to pay $200–$500 per person, depending on the location and season. Early mornings are best for calmer winds and cooler air, plus the sunrise views are unreal. Dress in layers, as it can get chilly up there, and bring a camera—those vistas are Instagram gold. 1.5rem;
+    margin-bottom: 1rem; /* Adjusted to balance with padding */
     transition: all .5s;
 }
+
 .main4_dc_button_a:hover {
     border: solid 1px var(--accent2);
     background-color: var(--accent2);
-    transform: scale(1.05)
+    transform: scale(1.05);
 }
+
 .main4_dc_button {
     padding: .5rem;
     padding-left: 1.5rem;
@@ -819,6 +874,15 @@ body {
     .main1_ipcopier {
         display: none;
     }
+    .main2_feature {
+        height: 20rem; /* Slightly smaller on mobile */
+        width: 15rem; /* Adjusted for smaller screens */
+        flex: 0 0 15rem;
+    }
+    .scroll-left,
+    .scroll-right {
+        display: none;
+    }
     .main5_admins_img {
         align-self: center;
         padding-top: 1rem;
@@ -832,7 +896,14 @@ body {
         padding: 2rem;
     }
     .main4_dc_div {
-        flex-direction: column;
+        flex-direction: column; /* Stack events, widget, and description vertically on mobile */
+    }
+    .main4_dc_events {
+        width: 100%; /* Full width on mobile */
+        min-height: auto; /* Adjust height to content */
+    }
+    .main4_dc_widget_wrapper {
+        width: 100%; /* Ensure the wrapper takes full width on mobile */
     }
     .main4_dc_widget {
         height: 20rem;
@@ -866,5 +937,20 @@ body {
     }
     .main3_join_div_div {
         margin: .25rem;
+    }
+}
+
+/* Responsive adjustments for Section 2 */
+@media (max-width: 1599px) {
+    .main2_features_div {
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
+}
+
+@media (max-width: 1279px) {
+    .main2_features_div {
+        margin-left: 0rem;
+        margin-right: 0rem;
     }
 }
