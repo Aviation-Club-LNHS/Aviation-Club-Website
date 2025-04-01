@@ -496,9 +496,9 @@ body {
     transition: all .5s;
     margin: 0.5rem;
     display: flex;
-    flex-direction: row; /* Changed to row to align widget and description side by side */
-    align-items: flex-start; /* Align items at the top */
-    gap: 1rem; /* Space between widget and description */
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
 }
 
 .main4_dc_widget_wrapper:hover {
@@ -520,43 +520,40 @@ body {
 }
 
 .main4_dc_description_div {
-    padding: 1rem;
-    max-width: 350px;
-    text-align: right;
+    text-align: right; /* Restored original right alignment */
 }
 
 .main4_dc_description_title {
-    margin: 0 0 1rem 0;
-    font-size: 1.5rem;
-    font-weight: 700;
-    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem; /* Restored original size */
+    font-weight: 700; /* Restored original weight */
+    font-family: 'Space Grotesk', sans-serif; /* Kept consistent */
+    color: #fff; /* Restored original color */
+    text-decoration: none; /* Restored original */
 }
 
 .main4_dc_description {
-    margin: 0 0 1rem 0;
-    font-size: 1.2rem;
-    font-family: 'Space Grotesk', sans-serif;
-    line-height: 1.6;
+    font-size: 1.2rem; /* Restored original size */
+    font-family: 'Space Grotesk', sans-serif; /* Kept consistent */
+    color: #ccc; /* Restored original color */
+    text-decoration: none; /* Restored original */
 }
 
 .main4_dc_button_a {
-    text-decoration: none;
-    color: #fff;
-    text-align: center;
-    border: solid var(--accent1) 1px;
-    border-radius: var(--roundness);
-    transition: all .5s;
-    margin-left: auto; /* Keeps button right-aligned within description */
-}
-
-.main4_dc_button_a:hover {
-    border: solid 1px var(--accent2);
-    background-color: var(--accent2);
-    transform: scale(1.05);
+    text-decoration: none; /* Restored original */
+    color: #fff; /* Restored original */
 }
 
 .main4_dc_button {
-    padding: .5rem 1.5rem;
+    padding: .5rem 1.5rem; /* Restored original padding */
+    background-color: var(--accent2); /* Restored original background */
+    border-radius: var(--roundness); /* Restored original */
+    transition: all .5s; /* Restored original */
+    text-align: center; /* Restored original */
+}
+
+.main4_dc_button:hover {
+    transform: scale(1.05); /* Restored original hover scale */
+    box-shadow: 0 0 30px rgba(134, 182, 246, 0.3); /* Restored original hover shadow */
 }
 
 /* Section 5 - Team */
@@ -789,8 +786,8 @@ body {
         align-items: center;
     }
     .main4_dc_widget_wrapper {
-        flex-direction: column; /* Stack widget and description on mobile */
-        align-items: center; /* Center contents on mobile */
+        flex-direction: column;
+        align-items: center;
         width: 100%;
     }
     .main4_dc_widget {
@@ -798,10 +795,9 @@ body {
         height: 20rem;
     }
     .main4_dc_description_div {
-        max-width: 100%;
-        text-align: center;
+        text-align: center; /* Center on mobile */
     }
-    .main4_dc_button_a {
+    .main4_dc_button {
         margin: 0 auto; /* Center button on mobile */
     }
     .main5_admins_div {
