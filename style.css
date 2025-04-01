@@ -17,7 +17,7 @@ span {
 }
 
 body {
-    font-family: 'Space Grotesk', sans-serif, Arial, sans-serif; /* Added fallback */
+    font-family: 'Space Grotesk', sans-serif, Arial, sans-serif;
     background-color: var(--background1);
     color: white;
     margin: 0;
@@ -156,7 +156,7 @@ body {
     align-content: center;
     justify-content: center;
     flex-direction: column;
-    padding-top: 4rem; /* Prevents overlap with fixed navbar */
+    padding-top: 4rem;
 }
 
 /* Section 1 - Hero */
@@ -319,7 +319,6 @@ body {
 }
 
 .scroll-left,
-W,
 .scroll-right {
     background-color: var(--background1);
     border: none;
@@ -403,7 +402,7 @@ W,
     text-align: right;
     font-size: 1.4rem;
     line-height: 1.5;
-    border-right: 3px solid var(--background2);
+    border-right:3px solid var(--background2);
     padding: 0.5rem 0.75rem;
 }
 
@@ -600,7 +599,7 @@ W,
     max-width: 45%;
     max-height: 100%;
     align-self: center;
-    object-fit: cover; /* Added for image consistency */
+    object-fit: cover;
 }
 
 .main5_admins_description_div {
@@ -636,7 +635,7 @@ W,
     text-decoration: none;
     transition: all .5s;
     margin-bottom: .5rem;
-    display: inline-block; /* Prevents layout shift on hover */
+    display: inline-block;
 }
 
 .main5_admins_description_title:hover {
@@ -672,7 +671,7 @@ W,
     max-height: 100%;
     align-self: center;
     margin: 1rem;
-    object-fit: cover; /* Added for image consistency */
+    object-fit: cover;
 }
 
 .main5_supporters_description_div {
@@ -702,7 +701,7 @@ W,
     text-decoration: none;
     transition: all .5s;
     margin-bottom: .5rem;
-    display: inline-block; /* Prevents layout shift on hover */
+    display: inline-block;
 }
 
 .main5_supporters_description_title:hover {
@@ -735,7 +734,7 @@ W,
 }
 
 .author-link:hover {
-    padding: 0 1.5rem; /* Changed from margin to padding */
+    padding: 0 1.5rem;
     color: #86B6F6;
     text-shadow: 0 0 10px rgba(134, 182, 246, 0.5);
 }
