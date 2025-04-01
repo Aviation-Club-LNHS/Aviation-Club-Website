@@ -7,6 +7,7 @@
     --accent1: #B4D4FF;
     --accent2: #86B6F6;
     --accent2_transp: #176B8755;
+    --accent3: #EEF5FF;
     --background1: #212529;
     --background2: #16191b;
 
@@ -220,13 +221,16 @@ body {
 .main1_logo {
     display: block;
     align-self: center;
-    margin-left:auto;
+    margin-left: auto;
     margin-right: auto;
     transition: all .5s;
     max-width: 40rem;
+    filter: drop-shadow(0 0 0 rgba(134, 182, 246, 0));
 }
+
 .main1_logo:hover {
-    transform: scale(1.05)
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 25px rgba(134, 183, 246, 0.75)); /* Alt color rgba(134, 182, 246, 0.5) */
 }
 
 .main1_description {
@@ -248,17 +252,19 @@ body {
     padding-right: 2rem;
     font-size: 2rem;
     background-color: var(--accent2_transp);
-    border: 0px;
+    border: 2px solid transparent;
     border-radius: var(--roundness);
     color: white;
     transition: all .5s;
-    cursor:pointer;
+    cursor: pointer;
     position: relative;
 }
 
 .main1_ipcopier:hover {
     background-color: var(--accent2);
-    transform: scale(1.05)
+    transform: scale(1.05);
+    border-color: var(--accent3);
+    box-shadow: 0 0 30px rgba(134, 182, 246, 0.3);
 }
 
 .main1_ipcopier_text1 {
@@ -329,11 +335,14 @@ body {
     border-radius: var(--roundness);
     transition: all .5s;
     flex-direction: column;
+    border: 2px solid transparent;
 }
 
 .main2_feature:hover {
     background-color: #00000099;
-    transform: scale(1.05)
+    transform: scale(1.05);
+    border-color: var(--accent2);
+    box-shadow: 0 0 30px rgba(134, 182, 246, 0.3);
 }
 
 @media (max-width: 1599px) {
@@ -472,6 +481,17 @@ body {
     max-width: 48rem;
 }
 
+.main4_dc_div iframe {
+    border-radius: var(--roundness);
+    border: 2px solid var(--accent1);
+    transition: all 0.3s ease;
+}
+
+.main4_dc_div iframe:hover {
+    border-color: var(--accent2);
+    box-shadow: 0 0 30px rgba(134, 182, 246, 0.3);
+}
+
 .main4_dc_description_div {
     display: flex;
     flex-direction: column;
@@ -506,6 +526,7 @@ body {
 .main4_dc_button_a:hover{
     border: solid 1px var(--accent2);
     background-color: var(--accent2);
+    box-shadow: 0 0 20px rgba(134, 182, 246, 0.3);
     transform: scale(1.05)
 }
 .main4_dc_button {
@@ -778,3 +799,4 @@ body {
 }
 
 
+/* Last Update: 3-31-25 */
