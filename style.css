@@ -534,7 +534,7 @@ body {
 }
 
 .main4_dc_widget_wrapper {
-    background-color: var(--background1); /* Matches the card background */
+    background-color: var(--background2); /* Changed to match main4_dc_div background */
     border-radius: var(--roundness); /* Ensures the wrapper has rounded corners */
     transition: all .5s; /* Smooth transition for background color */
 }
@@ -558,19 +558,20 @@ body {
 .main4_dc_description_div {
     display: flex;
     flex-direction: column;
+    padding: 1rem; /* Added padding for better spacing */
 }
 
 .main4_dc_description_title {
-    margin: 2rem;
+    margin: 1rem; /* Reduced margin to balance with padding */
     text-align: center;
     font-size: 1.5rem;
     font-weight: 700;
 }
 
 .main4_dc_description {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-left: 1rem; /* Adjusted to balance with padding */
+    margin-right: 1rem;
+    margin-bottom: 1rem;
     font-size: 1.2rem;
 }
 
@@ -583,7 +584,7 @@ body {
     margin-top: auto;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem; /* Adjusted to balance with padding */
     transition: all .5s;
 }
 
