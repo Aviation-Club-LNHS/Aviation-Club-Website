@@ -17,7 +17,7 @@ span {
 }
 
 body {
-    font-family: 'Space Grotesk', sans-serif, Arial, sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     background-color: var(--background1);
     color: white;
     margin: 0;
@@ -496,7 +496,7 @@ body {
     transition: all .5s;
     margin: 0.5rem;
     display: flex;
-    flex-direction: row; /* Kept as row per your recent request */
+    flex-direction: row;
     align-items: flex-start;
     gap: 1rem;
 }
@@ -520,39 +520,50 @@ body {
 }
 
 .main4_dc_description_div {
-    /* Original had no specific styling beyond inherited properties */
+    display: flex; /* Original */
+    flex-direction: column; /* Original */
 }
 
 .main4_dc_description_title {
-    font-size: 1.5rem; /* Exact original */
-    font-weight: 700; /* Exact original */
-    font-family: 'Space Grotesk', sans-serif; /* Exact original */
-    color: #fff; /* Exact original */
-    text-decoration: none; /* Exact original */
+    margin: 2rem; /* Original */
+    text-align: center; /* Original */
+    font-size: 1.5rem; /* Original */
+    font-weight: 700; /* Original */
+    /* Inherited color: white and font-family: 'Space Grotesk' from body */
 }
 
 .main4_dc_description {
-    font-size: 1.2rem; /* Exact original */
-    font-family: 'Space Grotesk', sans-serif; /* Exact original */
-    color: #ccc; /* Exact original */
-    text-decoration: none; /* Exact original */
+    margin-left: 1.5rem; /* Original */
+    margin-right: 1.5rem; /* Original */
+    margin-bottom: 1.5rem; /* Original */
+    font-size: 1.2rem; /* Original */
+    /* Inherited color: white and font-family: 'Space Grotesk' from body */
 }
 
 .main4_dc_button_a {
-    text-decoration: none; /* Exact original */
-    color: #fff; /* Exact original */
+    text-decoration: none; /* Original */
+    color: #fff; /* Original */
+    text-align: center; /* Original */
+    border: solid var(--accent1) 1px; /* Original */
+    border-radius: var(--roundness); /* Original */
+    margin-top: auto; /* Original */
+    margin-left: auto; /* Original */
+    margin-right: auto; /* Original */
+    margin-bottom: 1.5rem; /* Original */
+    transition: all .5s; /* Original */
+}
+
+.main4_dc_button_a:hover {
+    border: solid 1px var(--accent2); /* Original */
+    background-color: var(--accent2); /* Original */
+    box-shadow: 0 0 20px rgba(134, 182, 246, 0.3); /* Original */
+    transform: scale(1.05); /* Original */
 }
 
 .main4_dc_button {
-    padding: .5rem 1.5rem; /* Exact original */
-    background-color: var(--accent2); /* Exact original */
-    border-radius: var(--roundness); /* Exact original */
-    transition: all .5s; /* Exact original */
-}
-
-.main4_dc_button:hover {
-    transform: scale(1.05); /* Exact original */
-    box-shadow: 0 0 30px rgba(134, 182, 246, 0.3); /* Exact original */
+    padding: .5rem; /* Original */
+    padding-left: 1.5rem; /* Original */
+    padding-right: 1.5rem; /* Original */
 }
 
 /* Section 5 - Team */
@@ -785,19 +796,13 @@ body {
         align-items: center;
     }
     .main4_dc_widget_wrapper {
-        flex-direction: column; /* Stacks on mobile */
+        flex-direction: column;
         align-items: center;
         width: 100%;
     }
     .main4_dc_widget {
         width: 100%;
         height: 20rem;
-    }
-    .main4_dc_description_div {
-        /* No specific alignment change for mobile, defaults to left */
-    }
-    .main4_dc_button {
-        margin: 0 auto; /* Center button on mobile */
     }
     .main5_admins_div {
         flex-direction: column;
