@@ -528,68 +528,15 @@ body {
     margin: 2rem;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; /* Allow wrapping for better responsiveness */
     background-color: var(--background2);
     border-radius: var(--roundness);
     max-width: 48rem;
-    justify-content: space-between; /* Space out the events, widget, and description */
-    align-items: flex-start; /* Align items to the top */
-}
-
-.main4_dc_events {
-    background-color: var(--background2); /* Matches main4_dc_div background */
-    border-radius: var(--roundness); /* Rounded corners */
-    border: 2px solid transparent; /* Transparent border by default */
-    transition: all .5s; /* Smooth transition for hover effects */
-    padding: 1rem;
-    width: 350px; /* Match the width of the widget */
-    min-height: 500px; /* Match the height of the widget */
-    margin: 0.5rem; /* Add spacing */
-    display: flex;
-    flex-direction: column;
-}
-
-.main4_dc_events:hover {
-    background-color: #00000099; /* Matches the hover background of main2_feature */
-    transform: scale(1.05); /* Matches main2_feature hover */
-    border-color: var(--accent2); /* Matches main2_feature hover */
-    box-shadow: 0 0 30px rgba(134, 182, 246, 0.3); /* Matches main2_feature hover */
-}
-
-.main4_dc_events_title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 1rem;
-    color: #fff;
-}
-
-.main4_dc_event {
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    border-bottom: 1px solid #ffffff33; /* Subtle separator */
-}
-
-.main4_dc_event:last-child {
-    border-bottom: none; /* Remove border from the last event */
-}
-
-.main4_dc_event_name {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #fff;
-}
-
-.main4_dc_event_date {
-    font-size: 1rem;
-    color: #ccc;
 }
 
 .main4_dc_widget_wrapper {
-    background-color: var(--background2); /* Matches main4_dc_div background */
+    background-color: var(--background2); /* Changed to match main4_dc_div background */
     border-radius: var(--roundness); /* Ensures the wrapper has rounded corners */
     transition: all .5s; /* Smooth transition for background color */
-    margin: 0.5rem; /* Add spacing */
 }
 
 .main4_dc_widget_wrapper:hover {
@@ -600,8 +547,6 @@ body {
     border-radius: var(--roundness); /* Rounded corners */
     border: 2px solid transparent; /* Transparent border by default */
     transition: all .5s; /* Smooth transition for hover effects */
-    width: 350px; /* Fixed width as per iframe */
-    height: 500px; /* Fixed height as per iframe */
 }
 
 .main4_dc_widget:hover {
@@ -614,8 +559,6 @@ body {
     display: flex;
     flex-direction: column;
     padding: 1rem; /* Added padding for better spacing */
-    flex: 1; /* Allow the description to take remaining space */
-    min-width: 200px; /* Ensure it doesn't get too narrow */
 }
 
 .main4_dc_description_title {
@@ -623,7 +566,6 @@ body {
     text-align: center;
     font-size: 1.5rem;
     font-weight: 700;
-    font-family: 'Space Grotesk', sans-serif; /* Explicitly set to match body */
 }
 
 .main4_dc_description {
@@ -631,8 +573,6 @@ body {
     margin-right: 1rem;
     margin-bottom: 1rem;
     font-size: 1.2rem;
-    font-family: 'Space Grotesk', sans-serif; /* Explicitly set to match body */
-    line-height: 1.6; /* Adjusted for better readability */
 }
 
 .main4_dc_button_a {
@@ -896,11 +836,7 @@ body {
         padding: 2rem;
     }
     .main4_dc_div {
-        flex-direction: column; /* Stack events, widget, and description vertically on mobile */
-    }
-    .main4_dc_events {
-        width: 100%; /* Full width on mobile */
-        min-height: auto; /* Adjust height to content */
+        flex-direction: column;
     }
     .main4_dc_widget_wrapper {
         width: 100%; /* Ensure the wrapper takes full width on mobile */
