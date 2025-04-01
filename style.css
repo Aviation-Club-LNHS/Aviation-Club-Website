@@ -496,7 +496,7 @@ body {
     transition: all .5s;
     margin: 0.5rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* Kept as row per your recent request */
     align-items: flex-start;
     gap: 1rem;
 }
@@ -520,39 +520,39 @@ body {
 }
 
 .main4_dc_description_div {
-    /* No text-align specified, defaults to left as per original */
+    /* Original had no specific styling beyond inherited properties */
 }
 
 .main4_dc_description_title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    font-family: 'Space Grotesk', sans-serif;
-    color: #fff;
-    text-decoration: none;
+    font-size: 1.5rem; /* Exact original */
+    font-weight: 700; /* Exact original */
+    font-family: 'Space Grotesk', sans-serif; /* Exact original */
+    color: #fff; /* Exact original */
+    text-decoration: none; /* Exact original */
 }
 
 .main4_dc_description {
-    font-size: 1.2rem;
-    font-family: 'Space Grotesk', sans-serif;
-    color: #ccc;
-    text-decoration: none;
+    font-size: 1.2rem; /* Exact original */
+    font-family: 'Space Grotesk', sans-serif; /* Exact original */
+    color: #ccc; /* Exact original */
+    text-decoration: none; /* Exact original */
 }
 
 .main4_dc_button_a {
-    text-decoration: none;
-    color: #fff;
+    text-decoration: none; /* Exact original */
+    color: #fff; /* Exact original */
 }
 
 .main4_dc_button {
-    padding: .5rem 1.5rem;
-    background-color: var(--accent2);
-    border-radius: var(--roundness);
-    transition: all .5s;
+    padding: .5rem 1.5rem; /* Exact original */
+    background-color: var(--accent2); /* Exact original */
+    border-radius: var(--roundness); /* Exact original */
+    transition: all .5s; /* Exact original */
 }
 
 .main4_dc_button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(134, 182, 246, 0.3);
+    transform: scale(1.05); /* Exact original */
+    box-shadow: 0 0 30px rgba(134, 182, 246, 0.3); /* Exact original */
 }
 
 /* Section 5 - Team */
@@ -785,7 +785,7 @@ body {
         align-items: center;
     }
     .main4_dc_widget_wrapper {
-        flex-direction: column;
+        flex-direction: column; /* Stacks on mobile */
         align-items: center;
         width: 100%;
     }
