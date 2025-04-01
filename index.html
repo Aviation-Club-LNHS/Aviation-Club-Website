@@ -1,283 +1,229 @@
-<!-- ====================== 
-     HEAD SECTION 
-     ====================== -->
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aviation Club | LNHS</title>
-    <link rel="icon" type="image/png" href="media/favicon.png">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aviation Club | LNHS</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="https://i.imgur.com/0iH2b1P.png">
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <div class="banner">1 MONTH FREE</div>
+  <div class="desktop_navbar">
+    <a href="index.html"><img class="desktop_navbar_logo_img" src="https://i.imgur.com/0iH2b1P.png"></a>
+    <a class="desktop_navbar_link" href="#more">What We Have</a>
+    <a class="desktop_navbar_link" href="#discord">Discord</a>
+    <a class="desktop_navbar_link" href="#about">About Us</a>
+    <a class="desktop_navbar_link" href="#join">How to Join</a>
+    <div class="desktop_navbar_link2_div"><a class="desktop_navbar_link2" href="https://forms.gle/5n5n5n5n5n5n5n5n5">Sign Up</a></div>
+  </div>
+  <div class="mobile_navbar">
+    <a href="index.html" class="mobile_navbar_logo_img_a"><img class="mobile_navbar_logo_img" src="https://i.imgur.com/0iH2b1P.png"></a>
+    <a href="javascript:void(0);" class="icon" onclick="mobileNav()"><img src="https://i.imgur.com/5n5n5n5n5n5n5n5n5.png"></a>
+    <div id="mobile_navbar_links">
+      <a class="mobile_navbar_link" href="#more">What We Have</a>
+      <a class="mobile_navbar_link" href="#discord">Discord</a>
+      <a class="mobile_navbar_link" href="#about">About Us</a>
+      <a class="mobile_navbar_link" href="#join">How to Join</a>
+      <a class="mobile_navbar_link" href="https://forms.gle/5n5n5n5n5n5n5n5n5">Sign Up</a>
+    </div>
+  </div>
 
-<!-- ====================== 
-     NAVIGATION - DESKTOP 
-     ====================== -->
-
-  <body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <nav class="desktop_navbar">
-      <a href="#"><img class="desktop_navbar_logo_img" src="media/logo_small.png" alt="logo"></a>
-      <a href="#discord" class="desktop_navbar_link scroll">Community</a>
-      <a href="#about" class="desktop_navbar_link scroll">About Us</a>
-      <a href="#" class="desktop_navbar_link">Blog</a>
-      <div class="desktop_navbar_link2_div">
-          <a href="#join" class="desktop_navbar_link2 scroll">Join Us!</a>
-      </div>
-    </nav>
-
-<!-- ====================== 
-     NAVIGATION - MOBILE 
-     ====================== -->
-     
-    <div class="mobile_navbar">
-      <a href="#" class="mobile_navbar_logo_img_a"><img class="mobile_navbar_logo_img" src="media/logo_small.png" alt="logo"></a>
-      <div id="mobile_navbar_links">
-          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#discord">Community</a>
-          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#about">About Us</a>
-          <a class="mobile_navbar_link" onclick="mobile_navbar_link_hider()" href="#">Blog</a>
-          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#join">Join Us</a>
-        </div>
-        <div class="icon" onclick="mobile_navbar_link_hider()">
-            <i class="fa fa-bars"></i>
-        </div>
-        <script>
-            function mobile_navbar_link_hider() {
-            var x = document.getElementById("mobile_navbar_links");
-            if (x.style.display === "flex") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "flex";
-            }
-            } 
-        </script>
+  <!-- MAIN CONTENT -->
+  <div class="mainflex">
+    <!-- SECTION 1 - HERO -->
+    <div class="main1">
+      <a class="main1_logo_a"><img class="main1_logo" src="https://i.imgur.com/0iH2b1P.png"></a>
+      <a class="main1_description">Aviation Club at <span class="main1_actcent">LNHS</span></a>
+      <button class="main1_ipcopier" onclick="copyIP()">
+        <div class="main1_ipcopier_text1">play.AviationClub.com</div>
+        <div class="main1_ipcopier_text2">Click to copy!</div>
+      </button>
+      <div class="main1_popup" id="copyPopup">IP Copied!</div>
+      <a href="#more"><img class="main1_downarrow" src="https://i.imgur.com/5n5n5n5n5n5n5n5n5.png"></a>
     </div>
 
-<!-- ====================== 
-     MAIN CONTENT WRAPPER 
-     ====================== -->
-
-    <div class="mainflex">
-
-      <!-- SECTION 1 - HERO -->
-      <div class="main1">
-        <a class="main1_logo_a" href="#">
-          <img class="main1_logo" src="media/Logo-new.png" alt="logo">
-        </a>
-        <div class="main1_ipcopier_div">
-          <button class="main1_ipcopier" onclick="window.open('https://discord.gg/9ZFMz7WnS8', '_blank')" type="button">
-            <span class="main1_ipcopier_text1">Click To Join</span>
-            <br>
-            <span class="main1_ipcopier_text2">Discord Account Required</span>
-          </button>
+    <!-- SECTION 2 - FEATURES -->
+    <div id="more"></div>
+    <div class="main2">
+      <a class="headline">What We Have</a>
+      <div class="main2_features_div" id="featuresContainer">
+        <div class="main2_feature">
+          <img class="main2_feature_img" src="https://i.imgur.com/5n5n5n5n5n5n5n5n5.png">
+          <a class="main2_feature_headline">Feature 1</a>
+          <a class="main2_feature_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
         </div>
-        <a href="#more" class="scroll">
-          <img alt="downarrow" class="main1_downarrow" src="media/downarrow.png">
-        </a>
-        <script>
-          const scrollLinks = document.querySelectorAll('.scroll');
-          scrollLinks.forEach(function(link) {
-            link.addEventListener('click', function(event) {
-              event.preventDefault();
-              const target = document.querySelector(link.getAttribute('href'));
-              const offsetTop = target.offsetTop;
-              window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-              });
-            });
-          });
-        </script>
+        <div class="main2_feature">
+          <img class="main2_feature_img" src="https://i.imgur.com/5n5n5n5n5n5n5n5n5.png">
+          <a class="main2_feature_headline">Feature 2</a>
+          <a class="main2_feature_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+        </div>
+        <div class="main2_feature">
+          <img class="main2_feature_img" src="https://i.imgur.com/5n5n5n5n5n5n5n5n5.png">
+          <a class="main2_feature_headline">Feature 3</a>
+          <a class="main2_feature_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+        </div>
+        <div class="main2_feature">
+          <img class="main2_feature_img" src="https://i.imgur.com/5n5n5n5n5n5n5n5n5.png">
+          <a class="main2_feature_headline">Feature 4</a>
+          <a class="main2_feature_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+        </div>
+        <div class="main2_feature">
+          <img class="main2_feature_img" src="https://i.imgur.com/5n5n5n5n5n5n5n5n5.png">
+          <a class="main2_feature_headline">Feature 5</a>
+          <a class="main2_feature_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+        </div>
       </div>
+      <button class="scroll-left" onclick="scrollLeftFeatures()">&#10094;</button>
+      <button class="scroll-right" onclick="scrollRightFeatures()">&#10095;</button>
+    </div>
 
-      <!-- SECTION 2 - FEATURES -->
-      <div id="more"></div>
-      <div class="main2">
-        <a class="headline">What we have</a>
-        <button class="scroll-left">←</button>
-        <div class="main2_features_div">
-          <div class="main2_feature">
-            <img class="main2_feature_img" alt="Feature Image" src="media/placeholder.png">
-            <a class="main2_feature_headline">Feature 1</a>
-            <a class="main2_feature_text">Feature description</a>
-          </div>
-          <div class="main2_feature">
-            <img class="main2_feature_img" alt="Feature Image" src="media/placeholder.png">
-            <a class="main2_feature_headline">Feature 2</a>
-            <a class="main2_feature_text">Feature description</a>
-          </div>
-          <div class="main2_feature">
-            <img class="main2_feature_img" alt="Feature Image" src="media/placeholder.png">
-            <a class="main2_feature_headline">Feature 3</a>
-            <a class="main2_feature_text">Feature description</a>
-          </div>
-          <div class="main2_feature">
-            <img class="main2_feature_img" alt="Feature Image" src="media/placeholder.png">
-            <a class="main2_feature_headline">Feature 4</a>
-            <a class="main2_feature_text">Feature description</a>
-          </div>
-          <div class="main2_feature">
-            <img class="main2_feature_img" alt="Feature Image" src="media/placeholder.png">
-            <a class="main2_feature_headline">Feature 5</a>
-            <a class="main2_feature_text">Feature description</a>
+    <!-- SECTION 3 - JOIN -->
+    <div id="join"></div>
+    <div class="main3">
+      <a class="headline">How to Join</a>
+      <div class="main3_join_div_div">
+        <div class="main3_join_div">
+          <a class="main3_join_title">Details</a>
+          <div class="main3_join_content_div">
+            <div class="main3_join_categories">
+              <a>Day</a>
+              <a>Time</a>
+              <a>Location</a>
+            </div>
+            <div class="main3_join_values">
+              <a>Every Tuesday</a>
+              <a>3:00 PM</a>
+              <a>Room 123</a>
+            </div>
           </div>
         </div>
-        <button class="scroll-right">→</button>
-      </div>
-
-      <!-- SECTION 3 - DISCORD -->
-<div id="discord"></div>
-<div class="main4">
-  <a class="headline">Join the Discord</a>
-  <div class="main4_container">
-    <div class="main4_events_container">
-      <div class="main4_events_div">
-        <a class="main4_events_title">Upcoming Events</a>
-        <div class="main4_events_list">
-          <a class="main4_events_item">Airport Field Trip<br>September 15, 2023</a>
-          <a class="main4_events_item">Guest Speaker: Air Traffic Controller<br>October 5, 2023</a>
-          <a class="main4_events_item">Paper Airplane Competition<br>October 20, 2023</a>
-          <a class="main4_events_item">Aviation Movie Night<br>November 10, 2023</a>
+        <div class="main3_join_div">
+          <a class="main3_join_title">Instructions</a>
+          <div class="main3_join_content_div">
+            <div class="main3_join_instructions">
+              <a>1. Sign up using the form</a>
+              <a>2. Join the Discord server</a>
+              <a>3. Show up to the meetings!</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="main4_dc_container">
-      <div class="main4_dc_div">
-        <div class="main4_dc_widget_wrapper">
-          <iframe class="main4_dc_widget" src="https://discord.com/widget?id=1353885120737837207&theme" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+
+    <!-- SECTION 4 - DISCORD -->
+    <div id="discord"></div>
+    <div class="main4">
+      <a class="headline">Join the Discord</a>
+      <div class="main4_container">
+        <div class="main4_events_container">
+          <div class="main4_events_div">
+            <a class="main4_events_title">Upcoming Events</a>
+            <div class="main4_events_list">
+              <a class="main4_events_item">Airport Field Trip<br>September 15, 2023</a>
+              <a class="main4_events_item">Guest Speaker: Air Traffic Controller<br>October 5, 2023</a>
+              <a class="main4_events_item">Paper Airplane Competition<br>October 20, 2023</a>
+              <a class="main4_events_item">Aviation Movie Night<br>November 10, 2023</a>
+            </div>
+          </div>
         </div>
-        <div class="main4_dc_description_div">
-          <a class="main4_dc_description_title">Let's talk!</a>
-          <a class="main4_dc_description"> ・Meet other people <br> ・Ask questions <br> ・Get notified about updates & events <br> ・Give feedback  <br><br> & more </a>
-          <a href="https://discord.gg/9ZFMz7WnS8" class="main4_dc_button_a">
-            <div class="main4_dc_button">Join Now!</div>
-          </a>
+        <div class="main4_dc_container">
+          <div class="main4_dc_div">
+            <div class="main4_dc_widget_wrapper">
+              <iframe class="main4_dc_widget" src="https://discord.com/widget?id=1353885120737837207&theme" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div>
+            <div class="main4_dc_description_div">
+              <a class="main4_dc_description_title">Let's talk!</a>
+              <a class="main4_dc_description"> ・Meet other people <br> ・Ask questions <br> ・Get notified about updates & events <br> ・Give feedback  <br><br> & more </a>
+              <a href="https://discord.gg/9ZFMz7WnS8" class="main4_dc_button_a">
+                <div class="main4_dc_button">Join Now!</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 5 - TEAM -->
+    <div id="about"></div>
+    <div class="main5">
+      <a class="headline">Meet the Team</a>
+      <div class="main5_admin_div">
+        <a class="headline">Admins</a>
+        <div class="main5_admins_div main5_admins_dev_type1">
+          <img class="main5_admins_img" src="https://i.imgur.com/5n5n5n5n5n5n5n5n5.png">
+          <div class="main5_admins_description_div">
+            <a class="main5_admins_description_rank main5_admins_description_rank_owner">Owner</a>
+            <a class="main5_admins_description_title" href="https://www.youtube.com/@AviationClub">John Doe</a>
+            <a class="main5_admins_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+          </div>
+        </div>
+        <div class="main5_admins_div main5_admins_dev_type2">
+          <img class="main5_admins_img" src="https://i.imgur.com/5n5n5n5n5n5n5n5n5.png">
+          <div class="main5_admins_description_div">
+            <a class="main5_admins_description_rank main5_admins_description_rank_admin">Admin</a>
+            <a class="main5_admins_description_title" href="https://www.youtube.com/@AviationClub">Jane Smith</a>
+            <a class="main5_admins_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+          </div>
+        </div>
+      </div>
+      <div class="main5_supporter_div">
+        <a class="headline">Supporters</a>
+        <div class="main5_supporters_div">
+          <img class="main5_supporters_img" src="https://i.imgur.com/5n5n5n5n5n5n5n5n5.png">
+          <div class="main5_supporters_description_div">
+            <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">Supporter</a>
+            <a class="main5_supporters_description_title" href="https://www.youtube.com/@AviationClub">Alex Johnson</a>
+            <a class="main5_supporters_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+          </div>
+        </div>
+        <div class="main5_supporters_div">
+          <img class="main5_supporters_img" src="https://i.imgur.com/5n5n5n5n5n5n5n5n5.png">
+          <div class="main5_supporters_description_div">
+            <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">Supporter</a>
+            <a class="main5_supporters_description_title" href="https://www.youtube.com/@AviationClub">Emily Davis</a>
+            <a class="main5_supporters_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-      <!-- SECTION 4 - TEAM -->
-      <div id="about"></div>
-      <div class="main5">
-        <a class="headline">Who we are</a>
-        <div class="main5_admin_div">
-          <div class="main5_admins_div main5_admins_dev_type2">
-            <img class="main5_admins_img" alt="admin member img" src="media/member_placeholder.webp">
-            <div class="main5_admins_description_div">
-              <a class="main5_admins_description_rank main5_admins_description_rank_owner">[President]</a>
-              <a class="main5_admins_description_title" href="https://example.com">Pranav A</a>
-              <a class="main5_admins_description">President<br>description</a>
-            </div>
-          </div>
-          <div class="main5_admins_div main5_admins_dev_type1">
-            <img class="main5_admins_img" alt="admin member img" src="media/member_placeholder.webp">
-            <div class="main5_admins_description_div">
-              <a class="main5_admins_description_rank main5_admins_description_rank_admin">[Co-President]</a>
-              <a class="main5_admins_description_title" href="https://example.com">Kevin M</a>
-              <a class="main5_admins_description">Co-President<br>description</a>
-            </div>
-          </div>
-        </div>
-        <div class="main5_supporter_div">
-          <div class="main5_supporters_div">
-            <img class="main5_supporters_img" alt="supporters member img" src="media/member_placeholder.webp">
-            <div class="main5_supporters_description_div">
-              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Supporter]</a>
-              <a class="main5_supporters_description_title">Replaceable Supporter 1</a>
-              <a class="main5_supporters_description">Supporter<br>Description</a>
-            </div>
-          </div>
-          <div class="main5_supporters_div">
-            <img class="main5_supporters_img" alt="supporters member img" src="media/member_placeholder.webp">
-            <div class="main5_supporters_description_div">
-              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Supporter]</a>
-              <a class="main5_supporters_description_title">Replacable Supporter 2</a>
-              <a class="main5_supporters_description">Supporter<br>Description</a>
-            </div>
-          </div>
-          <div class="main5_supporters_div">
-            <img class="main5_supporters_img" alt="supporters member img" src="media/member_placeholder.webp">
-            <div class="main5_supporters_description_div">
-              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Supporter]</a>
-              <a class="main5_supporters_description_title">Replacable Supporter 3</a>
-              <a class="main5_supporters_description">Supporter<br>Description</a>
-            </div>
-          </div>
-          <div class="main5_supporters_div">
-            <img class="main5_supporters_img" alt="supporters member img" src="media/member_placeholder.webp">
-            <div class="main5_supporters_description_div">
-              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Supporter]</a>
-              <a class="main5_supporters_description_title">Replacable Supporter 4</a>
-              <a class="main5_supporters_description">Supporter<br>Description</a>
-            </div>
-          </div>
-        </div>
-      </div>
+  <!-- FOOTER / COPYRIGHT -->
+  <div class="copyright_div">
+    <a class="copyright">© 2023 Aviation Club | LNHS - Made with 💙 by <span class="author-link">John Doe</span></a>
+  </div>
 
-      <!-- SECTION 5 - JOIN -->
-      <div id="join"></div>
-      <div class="main3">
-        <a class="headline">How to join</a>
-        <div class="main3_join_div_div">
-          <div class="main3_join_div">
-            <a class="main3_join_title">Online</a>
-            <div class="main3_join_content_div">
-              <div class="main3_join_categories">
-                <a>1.</a>
-                <a>2.</a>
-                <a>3.</a>
-              </div>
-              <div class="main3_join_values">
-                <a>Join our Discord.</a>
-                <a>Apply to become a Member.</a>
-                <a>Wait for Approval.</a>
-              </div>
-            </div>
-          </div>
-          <div class="main3_join_div">
-            <a class="main3_join_title">In Person</a>
-            <div class="main3_join_content_div">
-              <div class="main3_join_categories">
-                <a>1.</a>
-              </div>
-              <div class="main3_join_values">
-                <a>NOT AVAILABLE YET</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- JAVASCRIPT -->
+  <script>
+    function mobileNav() {
+      var x = document.getElementById("mobile_navbar_links");
+      if (x.style.display === "flex") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "flex";
+      }
+    }
 
-<!-- ====================== 
-     FOOTER /
-     ====================== -->
+    function copyIP() {
+      navigator.clipboard.writeText("play.AviationClub.com");
+      var popup = document.getElementById("copyPopup");
+      popup.style.display = "block";
+      setTimeout(function() {
+        popup.style.display = "none";
+      }, 2000);
+    }
 
-    <footer class="copyright_div">
-      <a class="copyright">Made by ​</a><a href="https://github.com/fir15playz" class="author-link">Im_NotCool ​</a><a class="copyright">| ​</a><a href="LICENSE.txt" class="author-link">License</a>
-      <!-- The  () is because space wont work for some reason -->
-    </footer>
+    function scrollLeftFeatures() {
+      const container = document.getElementById("featuresContainer");
+      container.scrollBy({ left: -300, behavior: "smooth" });
+    }
 
-    <!-- JavaScript for Horizontal Scrolling Arrows -->
-    <script>
-      const featuresContainer = document.querySelector('.main2_features_div');
-      const scrollLeftBtn = document.querySelector('.scroll-left');
-      const scrollRightBtn = document.querySelector('.scroll-right');
-
-      scrollLeftBtn.addEventListener('click', () => {
-        featuresContainer.scrollBy({ left: -300, behavior: 'smooth' }); // Adjust based on card width
-      });
-
-      scrollRightBtn.addEventListener('click', () => {
-        featuresContainer.scrollBy({ left: 300, behavior: 'smooth' });
-      });
-    </script>
-  </body>
+    function scrollRightFeatures() {
+      const container = document.getElementById("featuresContainer");
+      container.scrollBy({ left: 300, behavior: "smooth" });
+    }
+  </script>
+</body>
 </html>
