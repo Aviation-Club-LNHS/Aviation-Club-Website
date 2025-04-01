@@ -494,10 +494,11 @@ body {
     background-color: var(--background2);
     border-radius: var(--roundness);
     transition: all .5s;
-    margin: 0.5rem; /* Restored original margin */
+    margin: 0.5rem;
     display: flex;
-    flex-direction: column; /* Allows widget and description to stack */
-    align-items: flex-end; /* Right-align contents */
+    flex-direction: row; /* Changed to row to align widget and description side by side */
+    align-items: flex-start; /* Align items at the top */
+    gap: 1rem; /* Space between widget and description */
 }
 
 .main4_dc_widget_wrapper:hover {
@@ -545,7 +546,7 @@ body {
     border: solid var(--accent1) 1px;
     border-radius: var(--roundness);
     transition: all .5s;
-    margin-left: auto; /* Keeps button right-aligned */
+    margin-left: auto; /* Keeps button right-aligned within description */
 }
 
 .main4_dc_button_a:hover {
@@ -788,8 +789,9 @@ body {
         align-items: center;
     }
     .main4_dc_widget_wrapper {
+        flex-direction: column; /* Stack widget and description on mobile */
+        align-items: center; /* Center contents on mobile */
         width: 100%;
-        align-items: center; /* Center widget and description on mobile */
     }
     .main4_dc_widget {
         width: 100%;
@@ -800,7 +802,7 @@ body {
         text-align: center;
     }
     .main4_dc_button_a {
-        margin: 0 auto;
+        margin: 0 auto; /* Center button on mobile */
     }
     .main5_admins_div {
         flex-direction: column;
