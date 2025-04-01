@@ -437,37 +437,6 @@ body {
     transform: scale(1.1) translateY(-50%); /* Adjusted to account for transform */
 }
 
-/* Hide arrows on mobile (max-width: 600px) */
-@media (max-width: 600px) {
-    .scroll-left,
-    .scroll-right {
-        display: none;
-    }
-}
-
-/* Responsive adjustments for Section 2 */
-@media (max-width: 1599px) {
-    .main2_features_div {
-        margin-left: 10rem;
-        margin-right: 10rem;
-    }
-}
-
-@media (max-width: 1279px) {
-    .main2_features_div {
-        margin-left: 0rem;
-        margin-right: 0rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .main2_feature {
-        height: 20rem; /* Slightly smaller on mobile */
-        width: 15rem; /* Adjusted for smaller screens */
-        flex: 0 0 15rem;
-    }
-}
-
 /* Section 3 - Join */
 .main3 {
     background-color: var(--background1);
@@ -562,6 +531,28 @@ body {
     background-color: var(--background2);
     border-radius: var(--roundness);
     max-width: 48rem;
+}
+
+.main4_dc_widget_wrapper {
+    background-color: var(--background1); /* Matches the card background */
+    border-radius: var(--roundness); /* Ensures the wrapper has rounded corners */
+    transition: all .5s; /* Smooth transition for background color */
+}
+
+.main4_dc_widget_wrapper:hover {
+    background-color: #00000099; /* Matches the hover background of main2_feature */
+}
+
+.main4_dc_widget {
+    border-radius: var(--roundness); /* Rounded corners */
+    border: 2px solid transparent; /* Transparent border by default */
+    transition: all .5s; /* Smooth transition for hover effects */
+}
+
+.main4_dc_widget:hover {
+    transform: scale(1.05); /* Matches main2_feature hover */
+    border-color: var(--accent2); /* Matches main2_feature hover */
+    box-shadow: 0 0 30px rgba(134, 182, 246, 0.3); /* Matches main2_feature hover */
 }
 
 .main4_dc_description_div {
@@ -822,6 +813,15 @@ body {
     .main1_ipcopier {
         display: none;
     }
+    .main2_feature {
+        height: 20rem; /* Slightly smaller on mobile */
+        width: 15rem; /* Adjusted for smaller screens */
+        flex: 0 0 15rem;
+    }
+    .scroll-left,
+    .scroll-right {
+        display: none;
+    }
     .main5_admins_img {
         align-self: center;
         padding-top: 1rem;
@@ -837,7 +837,10 @@ body {
     .main4_dc_div {
         flex-direction: column;
     }
-    .main4_dc_div iframe {
+    .main4_dc_widget_wrapper {
+        width: 100%; /* Ensure the wrapper takes full width on mobile */
+    }
+    .main4_dc_widget {
         height: 20rem;
         width: 100%;
     }
@@ -869,5 +872,20 @@ body {
     }
     .main3_join_div_div {
         margin: .25rem;
+    }
+}
+
+/* Responsive adjustments for Section 2 */
+@media (max-width: 1599px) {
+    .main2_features_div {
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
+}
+
+@media (max-width: 1279px) {
+    .main2_features_div {
+        margin-left: 0rem;
+        margin-right: 0rem;
     }
 }
