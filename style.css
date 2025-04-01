@@ -524,55 +524,126 @@ body {
     align-items: center;
 }
 
-.main4_dc_div {
-    margin: 2rem;
+.main4_container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 72rem; /* Increased to accommodate both sections */
+    width: 100%;
+    margin: 2rem;
+    gap: 1rem; /* Space between the two sections */
+}
+
+.main4_events_container {
+    flex: 1;
+    min-width: 300px; /* Ensure it doesn't get too narrow */
+    display: flex;
+    justify-content: center;
+}
+
+.main4_events_div {
+    background-color: var(--background2);
+    border-radius: var(--roundness);
+    padding: 1rem;
+    width: 100%;
+    max-width: 350px; /* Match the width of the widget for balance */
+    transition: all .5s;
+    border: 2px solid transparent;
+}
+
+.main4_events_div:hover {
+    background-color: #00000099;
+    transform: scale(1.05);
+    border-color: var(--accent2);
+    box-shadow: 0 0 30px rgba(134, 182, 246, 0.3);
+}
+
+.main4_events_title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.main4_events_list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.main4_events_item {
+    font-size: 1.2rem;
+    color: #ccc;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+.main4_dc_container {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.main4_dc_div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     background-color: var(--background2);
     border-radius: var(--roundness);
     max-width: 48rem;
+    width: 100%;
+    gap: 1rem;
 }
 
 .main4_dc_widget_wrapper {
-    background-color: var(--background2); /* Changed to match main4_dc_div background */
-    border-radius: var(--roundness); /* Ensures the wrapper has rounded corners */
-    transition: all .5s; /* Smooth transition for background color */
+    background-color: var(--background2);
+    border-radius: var(--roundness);
+    transition: all .5s;
+    flex: 0 0 350px;
 }
 
 .main4_dc_widget_wrapper:hover {
-    background-color: #00000099; /* Matches the hover background of main2_feature */
+    background-color: #00000099;
 }
 
 .main4_dc_widget {
-    border-radius: var(--roundness); /* Rounded corners */
-    border: 2px solid transparent; /* Transparent border by default */
-    transition: all .5s; /* Smooth transition for hover effects */
+    border-radius: var(--roundness);
+    border: 2px solid transparent;
+    transition: all .5s;
 }
 
 .main4_dc_widget:hover {
-    transform: scale(1.05); /* Matches main2_feature hover */
-    border-color: var(--accent2); /* Matches main2_feature hover */
-    box-shadow: 0 0 30px rgba(134, 182, 246, 0.3); /* Matches main2_feature hover */
+    transform: scale(1.05);
+    border-color: var(--accent2);
+    box-shadow: 0 0 30px rgba(134, 182, 246, 0.3);
 }
 
 .main4_dc_description_div {
     display: flex;
     flex-direction: column;
-    padding: 1rem; /* Added padding for better spacing */
+    padding: 1rem;
+    flex: 1;
+    min-width: 300px;
 }
 
 .main4_dc_description_title {
-    margin: 1rem; /* Reduced margin to balance with padding */
+    margin: 1rem;
     text-align: center;
     font-size: 1.5rem;
     font-weight: 700;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 .main4_dc_description {
-    margin-left: 1rem; /* Adjusted to balance with padding */
+    margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: 1rem;
     font-size: 1.2rem;
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1.6;
 }
 
 .main4_dc_button_a {
@@ -584,7 +655,7 @@ body {
     margin-top: auto;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 1rem; /* Adjusted to balance with padding */
+    margin-bottom: 1rem;
     transition: all .5s;
 }
 
@@ -835,15 +906,36 @@ body {
         max-width: 100%;
         padding: 2rem;
     }
+    .main4_container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main4_events_container {
+        width: 100%;
+        min-width: 0; /* Reset min-width on mobile */
+    }
+    .main4_events_div {
+        max-width: 100%; /* Full width on mobile */
+    }
+    .main4_dc_container {
+        width: 100%;
+        min-width: 0; /* Reset min-width on mobile */
+    }
     .main4_dc_div {
         flex-direction: column;
+        align-items: center;
     }
     .main4_dc_widget_wrapper {
-        width: 100%; /* Ensure the wrapper takes full width on mobile */
+        width: 100%;
+        flex: 0 0 auto; /* Reset flex on mobile */
     }
     .main4_dc_widget {
         height: 20rem;
         width: 100%;
+    }
+    .main4_dc_description_div {
+        width: 100%;
+        min-width: 0; /* Reset min-width on mobile */
     }
     .main3_join_div {
         min-width: 20rem;
