@@ -520,40 +520,39 @@ body {
 }
 
 .main4_dc_description_div {
-    text-align: right; /* Restored original right alignment */
+    /* No text-align specified, defaults to left as per original */
 }
 
 .main4_dc_description_title {
-    font-size: 1.5rem; /* Restored original size */
-    font-weight: 700; /* Restored original weight */
-    font-family: 'Space Grotesk', sans-serif; /* Kept consistent */
-    color: #fff; /* Restored original color */
-    text-decoration: none; /* Restored original */
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Space Grotesk', sans-serif;
+    color: #fff;
+    text-decoration: none;
 }
 
 .main4_dc_description {
-    font-size: 1.2rem; /* Restored original size */
-    font-family: 'Space Grotesk', sans-serif; /* Kept consistent */
-    color: #ccc; /* Restored original color */
-    text-decoration: none; /* Restored original */
+    font-size: 1.2rem;
+    font-family: 'Space Grotesk', sans-serif;
+    color: #ccc;
+    text-decoration: none;
 }
 
 .main4_dc_button_a {
-    text-decoration: none; /* Restored original */
-    color: #fff; /* Restored original */
+    text-decoration: none;
+    color: #fff;
 }
 
 .main4_dc_button {
-    padding: .5rem 1.5rem; /* Restored original padding */
-    background-color: var(--accent2); /* Restored original background */
-    border-radius: var(--roundness); /* Restored original */
-    transition: all .5s; /* Restored original */
-    text-align: center; /* Restored original */
+    padding: .5rem 1.5rem;
+    background-color: var(--accent2);
+    border-radius: var(--roundness);
+    transition: all .5s;
 }
 
 .main4_dc_button:hover {
-    transform: scale(1.05); /* Restored original hover scale */
-    box-shadow: 0 0 30px rgba(134, 182, 246, 0.3); /* Restored original hover shadow */
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(134, 182, 246, 0.3);
 }
 
 /* Section 5 - Team */
@@ -795,7 +794,7 @@ body {
         height: 20rem;
     }
     .main4_dc_description_div {
-        text-align: center; /* Center on mobile */
+        /* No specific alignment change for mobile, defaults to left */
     }
     .main4_dc_button {
         margin: 0 auto; /* Center button on mobile */
