@@ -1,7 +1,3 @@
-<!-- ====================== 
-     HEAD SECTION 
-     ====================== -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,10 +11,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
-<!-- ====================== 
-     NAVIGATION - DESKTOP 
-     ====================== -->
-
   <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <nav class="desktop_navbar">
@@ -31,10 +23,6 @@
       </div>
     </nav>
 
-<!-- ====================== 
-     NAVIGATION - MOBILE 
-     ====================== -->
-     
     <div class="mobile_navbar">
       <a href="#" class="mobile_navbar_logo_img_a"><img class="mobile_navbar_logo_img" src="media/logo_small.png" alt="logo"></a>
       <div id="mobile_navbar_links">
@@ -58,12 +46,7 @@
         </script>
     </div>
 
-<!-- ====================== 
-     MAIN CONTENT WRAPPER 
-     ====================== -->
-
     <div class="mainflex">
-
       <!-- SECTION 1 - HERO -->
       <div class="main1">
         <a class="main1_logo_a" href="#">
@@ -130,44 +113,46 @@
         <button class="scroll-right">→</button>
       </div>
 
-<!-- SECTION 3 - DISCORD -->
-<div id="discord"></div>
-<div class="main4">
-  <a class="headline">Join the Discord</a>
-  <div class="main4_dc_div">
-    <!-- New Upcoming Events Section (Left) -->
-    <div class="main4_dc_events">
-      <div class="main4_dc_events_title">Upcoming Events</div>
-      <div class="main4_dc_event">
-        <div class="main4_dc_event_name">Airport Field Trip</div>
-        <div class="main4_dc_event_date">September 15, 2023</div>
+      <!-- SECTION 3 - DISCORD -->
+      <div id="discord"></div>
+      <div class="main4">
+        <a class="headline">Join the Discord</a>
+        <div class="main4_dc_div">
+          <!-- Left-aligned Upcoming Events Section -->
+          <div class="main4_dc_events">
+            <div class="main4_dc_events_title">Upcoming Events</div>
+            <div class="main4_dc_event">
+              <div class="main4_dc_event_name">Airport Field Trip</div>
+              <div class="main4_dc_event_date">September 15, 2023</div>
+            </div>
+            <div class="main4_dc_event">
+              <div class="main4_dc_event_name">Guest Speaker: Air Traffic Controller</div>
+              <div class="main4_dc_event_date">October 5, 2023</div>
+            </div>
+            <div class="main4_dc_event">
+              <div class="main4_dc_event_name">Paper Airplane Competition</div>
+              <div class="main4_dc_event_date">October 20, 2023</div>
+            </div>
+            <div class="main4_dc_event">
+              <div class="main4_dc_event_name">Aviation Movie Night</div>
+              <div class="main4_dc_event_date">November 10, 2023</div>
+            </div>
+          </div>
+          <!-- Right-aligned Widget and Description -->
+          <div class="main4_dc_right">
+            <div class="main4_dc_widget_wrapper">
+              <iframe class="main4_dc_widget" src="https://discord.com/widget?id=1353885120737837207&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div>
+            <div class="main4_dc_description_div">
+              <a class="main4_dc_description_title">Let's talk!</a>
+              <a class="main4_dc_description"> ・Meet other people <br> ・Ask questions <br> ・Get notified about updates & events <br> ・Give feedback  <br><br> & more </a>
+              <a href="https://discord.gg/9ZFMz7WnS8" class="main4_dc_button_a">
+                <div class="main4_dc_button">Join Now!</div>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="main4_dc_event">
-        <div class="main4_dc_event_name">Guest Speaker: Air Traffic Controller</div>
-        <div class="main4_dc_event_date">October 5, 2023</div>
-      </div>
-      <div class="main4_dc_event">
-        <div class="main4_dc_event_name">Paper Airplane Competition</div>
-        <div class="main4_dc_event_date">October 20, 2023</div>
-      </div>
-      <div class="main4_dc_event">
-        <div class="main4_dc_event_name">Aviation Movie Night</div>
-        <div class="main4_dc_event_date">November 10, 2023</div>
-      </div>
-    </div>
-    <!-- Existing Members Widget (Right) -->
-    <div class="main4_dc_widget_wrapper">
-      <iframe class="main4_dc_widget" src="https://discord.com/widget?id=1353885120737837207&theme" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-    </div>
-    <div class="main4_dc_description_div">
-      <a class="main4_dc_description_title">Let's talk!</a>
-      <a class="main4_dc_description"> ・Meet other people <br> ・Ask questions <br> ・Get notified about updates & events <br> ・Give feedback  <br><br> & more </a>
-      <a href="https://discord.gg/9ZFMz7WnS8" class="main4_dc_button_a">
-        <div class="main4_dc_button">Join Now!</div>
-      </a>
-    </div>
-  </div>
-</div>
 
       <!-- SECTION 4 - TEAM -->
       <div id="about"></div>
@@ -261,24 +246,18 @@
         </div>
       </div>
     </div>
-       
-<!-- ====================== 
-     FOOTER /
-     ====================== -->
 
     <footer class="copyright_div">
       <a class="copyright">Made by ​</a><a href="https://github.com/fir15playz" class="author-link">Im_NotCool ​</a><a class="copyright">| ​</a><a href="#" class="author-link">License</a>
-      <!-- The  () is because space wont work for some reason -->
     </footer>
 
-    <!-- JavaScript for Horizontal Scrolling Arrows (Looping Removed) -->
     <script>
       const featuresContainer = document.querySelector('.main2_features_div');
       const scrollLeftBtn = document.querySelector('.scroll-left');
       const scrollRightBtn = document.querySelector('.scroll-right');
 
       scrollLeftBtn.addEventListener('click', () => {
-        featuresContainer.scrollBy({ left: -300, behavior: 'smooth' }); // Adjust based on card width
+        featuresContainer.scrollBy({ left: -300, behavior: 'smooth' });
       });
 
       scrollRightBtn.addEventListener('click', () => {
