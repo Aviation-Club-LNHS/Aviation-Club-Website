@@ -590,8 +590,8 @@ body {
 .main5_admins_div {
     display: flex;
     flex-direction: row;
-    width: 25rem; /* Increased length from 30rem to 36rem */
-    min-height: 12rem;
+    width: 28rem; /* Increased length from 30rem to 36rem */
+    min-height: 18rem;
     background-color: var(--background1);
     border-radius: var(--roundness);
     transition: all .5s;
