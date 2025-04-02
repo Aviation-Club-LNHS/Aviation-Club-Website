@@ -431,10 +431,10 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: stretch; /* Ensure children stretch to fill height */
+    align-items: stretch;
     max-width: 90vw;
     gap: 2rem;
-    height: 500px; /* Fixed height to match widget */
+    height: 500px;
 }
 
 .main4_dc_events {
@@ -446,7 +446,7 @@ body {
     width: 350px;
     display: flex;
     flex-direction: column;
-    overflow-y: auto; /* Scroll if content exceeds height */
+    overflow-y: auto;
 }
 
 .main4_dc_events:hover {
@@ -489,7 +489,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    flex: 1; /* Allow it to stretch within container */
+    flex: 1;
 }
 
 .main4_dc_widget_wrapper {
@@ -500,7 +500,7 @@ body {
     flex-direction: row;
     align-items: flex-start;
     gap: 1rem;
-    height: 100%; /* Fill the container's height */
+    height: 100%;
 }
 
 .main4_dc_widget_wrapper:hover {
@@ -579,43 +579,49 @@ body {
 
 .main5_admin_div {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem 1rem .5rem 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+    gap: 2rem;
+    max-width: 90vw;
 }
 
 .main5_admins_div {
     display: flex;
-    max-width: 46rem;
-    min-height: 18rem;
+    flex-direction: row;
+    width: 36rem; /* Increased length from 30rem to 36rem */
+    min-height: 12rem;
     background-color: var(--background1);
     border-radius: var(--roundness);
-    margin: 1rem;
+    transition: all .5s;
+    border: 2px solid transparent;
+}
+
+.main5_admins_div:hover {
+    background-color: #00000099;
+    transform: scale(1.05);
+    border-color: var(--accent2);
+    box-shadow: 0 0 30px rgba(134, 182, 246, 0.3);
 }
 
 .main5_admins_dev_type1 {
     flex-direction: row;
-    padding-right: 2rem;
-}
-
-.main5_admins_dev_type2 {
-    flex-direction: row-reverse;
-    padding-left: 2rem;
 }
 
 .main5_admins_img {
-    border-radius: var(--roundness);
-    max-width: 45%;
-    max-height: 100%;
+    border-radius: var(--roundness); /* Changed from 50% (circle) to var(--roundness) for rounded corner square */
+    width: 8rem;
+    height: 8rem;
     align-self: center;
     object-fit: cover;
+    margin: 1rem;
 }
 
 .main5_admins_description_div {
     display: flex;
     justify-content: center;
-    max-width: 60%;
-    padding: 2rem;
+    padding: 1rem;
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
@@ -623,7 +629,7 @@ body {
 
 .main5_admins_description_rank {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     margin-bottom: .5rem;
 }
@@ -654,32 +660,62 @@ body {
 
 .main5_admins_description {
     font-size: 1.2rem;
+    text-align: center;
+    color: #ccc;
+}
+
+.main5_admins_socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.main5_admins_socials a {
+    color: #ccc;
+    font-size: 1.2rem;
+    transition: all .5s;
+}
+
+.main5_admins_socials a:hover {
+    color: var(--accent1);
+    transform: scale(1.2);
 }
 
 .main5_supporter_div {
-    display: flex;
-    max-width: 825px;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 90vw;
+    justify-items: center;
     margin-bottom: 1.5rem;
+    padding: 0 1rem;
 }
 
 .main5_supporters_div {
-    width: 23.5rem;
-    min-height: 16rem;
+    width: 20rem;
+    min-height: 10rem;
     background-color: var(--background1);
     border-radius: var(--roundness);
-    margin: .5rem;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all .5s;
+    border: 2px solid transparent;
+}
+
+.main5_supporters_div:hover {
+    background-color: #00000099;
+    transform: scale(1.05);
+    border-color: var(--accent2);
+    box-shadow: 0 0 30px rgba(134, 182, 246, 0.3);
 }
 
 .main5_supporters_img {
-    border-radius: var(--roundness);
-    max-width: 25%;
-    max-height: 100%;
-    align-self: center;
-    margin: 1rem;
+    border-radius: var(--roundness); /* Changed from 50% (circle) to var(--roundness) for rounded corner square */
+    width: 6rem;
+    height: 6rem;
+    margin-top: 1rem;
     object-fit: cover;
 }
 
@@ -687,19 +723,9 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 1rem 1.5rem 1rem 1rem;
+    padding: 1rem;
     flex-direction: column;
-}
-
-.main5_supporters_description_rank {
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: .5rem;
-}
-
-.main5_supporters_description_rank_supporter {
-    color: #00f8ff;
+    align-items: center;
 }
 
 .main5_supporters_description_title {
@@ -718,8 +744,18 @@ body {
     transform: scale(1.05);
 }
 
+.main5_supporters_description_rank {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+    color: #00f8ff;
+}
+
 .main5_supporters_description {
     font-size: 1.2rem;
+    text-align: center;
+    color: #ccc;
 }
 
 /* FOOTER / COPYRIGHT STYLES */
@@ -787,11 +823,11 @@ body {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
-        height: auto; /* Allow stacking on mobile */
+        height: auto;
     }
     .main4_dc_events {
         width: 100%;
-        height: auto; /* Adjust for mobile stacking */
+        height: auto;
     }
     .main4_dc_right {
         align-items: center;
@@ -800,21 +836,32 @@ body {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        height: auto; /* Adjust for mobile stacking */
+        height: auto;
     }
     .main4_dc_widget {
         width: 100%;
         height: 20rem;
     }
-    .main5_admins_div {
+    .main5_admin_div {
         flex-direction: column;
-        min-height: 0;
+        gap: 1rem;
     }
-    .main5_admins_dev_type1 {
-        padding-right: 0;
+    .main5_admins_div {
+        width: 100%;
+        max-width: 20rem;
+        min-height: 10rem;
     }
-    .main5_admins_dev_type2 {
-        padding-left: 0;
+    .main5_admins_img {
+        width: 6rem;
+        height: 6rem;
+    }
+    .main5_supporter_div {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .main5_supporters_div {
+        width: 100%;
+        max-width: 20rem;
     }
     .main3_join_div {
         min-width: 20rem;
