@@ -426,14 +426,15 @@ body {
     align-items: center;
 }
 
-.main4_dc_div {
+.main4_dc_container {
     margin: 2rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch; /* Ensure children stretch to fill height */
     max-width: 90vw;
     gap: 2rem;
+    height: 500px; /* Fixed height to match widget */
 }
 
 .main4_dc_events {
@@ -443,10 +444,9 @@ body {
     transition: all .5s;
     padding: 1rem;
     width: 350px;
-    height: 500px; /* Fixed height to match widget */
     display: flex;
     flex-direction: column;
-    overflow-y: auto; /* Allow scrolling if content overflows */
+    overflow-y: auto; /* Scroll if content exceeds height */
 }
 
 .main4_dc_events:hover {
@@ -489,17 +489,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    flex: 1; /* Allow it to stretch within container */
 }
 
 .main4_dc_widget_wrapper {
     background-color: var(--background2);
     border-radius: var(--roundness);
     transition: all .5s;
-    margin: 0.5rem;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 1rem;
+    height: 100%; /* Fill the container's height */
 }
 
 .main4_dc_widget_wrapper:hover {
@@ -782,10 +783,11 @@ body {
     .scroll-right {
         display: none;
     }
-    .main4_dc_div {
+    .main4_dc_container {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+        height: auto; /* Allow stacking on mobile */
     }
     .main4_dc_events {
         width: 100%;
@@ -798,6 +800,7 @@ body {
         flex-direction: column;
         align-items: center;
         width: 100%;
+        height: auto; /* Adjust for mobile stacking */
     }
     .main4_dc_widget {
         width: 100%;
