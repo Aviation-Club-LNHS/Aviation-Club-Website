@@ -443,7 +443,7 @@ body {
     transition: all .5s;
     padding: 1rem;
     width: 350px;
-    min-height: 500px;
+    height: 500px;
     display: flex;
     flex-direction: column;
 }
