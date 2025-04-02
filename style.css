@@ -247,7 +247,7 @@ body {
     padding: 10px;
 }
 
-@media (min-width: lighter601px) {
+@media (min-width: 601px) {
     .main2_features_div {
         -ms-overflow-style: none;
         scrollbar-width: none;
@@ -443,9 +443,10 @@ body {
     transition: all .5s;
     padding: 1rem;
     width: 350px;
-    height: 500px; /* Changed from min-height to fixed height to match widget */
+    height: 500px; /* Fixed height to match widget */
     display: flex;
     flex-direction: column;
+    overflow-y: auto; /* Allow scrolling if content overflows */
 }
 
 .main4_dc_events:hover {
