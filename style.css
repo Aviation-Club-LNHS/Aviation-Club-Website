@@ -76,17 +76,23 @@ body {
     text-decoration: none;
     text-align: center;
 }
+
 .desktop_navbar_link2_div {
     font-size: 1.2rem;
     padding: .8rem;
     transition: all .5s;
-    margin-left: auto;
-    margin-right: 2rem;
+    margin-left: 0.5rem; /* Adjusted to 0.5rem for ~0.5cm spacing between buttons */
+    margin-right: 2rem; /* Kept original right margin for the last button */
     font-weight: 700;
     border: solid 1px var(--accent1);
     border-radius: var(--roundness);
     text-align: center;
 }
+
+.desktop_navbar_link2_div:first-of-type {
+    margin-left: auto; /* Ensures the first button ("Sign Up") aligns after the links */
+}
+
 .desktop_navbar_link2_div:hover {
     border: solid 1px var(--accent2);
     background-color: var(--accent2);
@@ -590,7 +596,7 @@ body {
 .main5_admins_div {
     display: flex;
     flex-direction: row;
-    width: 28rem; /* Increased length from 30rem to 36rem */
+    width: 28rem;
     min-height: 18rem;
     background-color: var(--background1);
     border-radius: var(--roundness);
@@ -610,7 +616,7 @@ body {
 }
 
 .main5_admins_img {
-    border-radius: var(--roundness); /* Changed from 50% (circle) to var(--roundness) for rounded corner square */
+    border-radius: var(--roundness);
     width: 8rem;
     height: 8rem;
     align-self: center;
@@ -712,7 +718,7 @@ body {
 }
 
 .main5_supporters_img {
-    border-radius: var(--roundness); /* Changed from 50% (circle) to var(--roundness) for rounded corner square */
+    border-radius: var(--roundness);
     width: 6rem;
     height: 6rem;
     margin-top: 1rem;
