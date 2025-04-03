@@ -81,7 +81,7 @@ body {
     font-size: 1.2rem;
     padding: .8rem;
     transition: all .5s;
-    margin-left: 0.25rem; /* Adjusted to 0.25rem for ~0.25cm spacing between buttons */
+    margin-left: 0.05rem; /* Adjusted to 0.25rem for ~0.25cm spacing between buttons */
     margin-right: 2rem; /* Kept original right margin for the last button */
     font-weight: 700;
     border: solid 1px var(--accent1);
