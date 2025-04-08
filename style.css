@@ -82,7 +82,7 @@ body {
     padding: .8rem;
     transition: all .5s;
     margin-left: 0.025rem; 
-    margin-right: 2rem; 
+    margin-right: 1rem; 
     font-weight: 700;
     border: solid 1px var(--accent1);
     border-radius: var(--roundness);
